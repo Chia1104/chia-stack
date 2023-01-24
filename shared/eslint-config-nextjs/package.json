@@ -1,0 +1,11 @@
+{
+  "name": "eslint-config-nextjs",
+  "version": "0.0.0",
+  "main": "index.js",
+  "dependencies": {
+    "eslint-plugin-react": "7.31.11"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}

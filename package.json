@@ -4,21 +4,42 @@
   "private": true,
   "workspaces": [
     "apps/*",
-    "packages/*"
+    "packages/*",
+    "examples/*",
+    "shared/*"
   ],
   "scripts": {
+    "prepare": "husky install",
     "build": "turbo run build",
     "dev": "turbo run dev --parallel",
+    "start": "turbo run start",
     "lint": "turbo run lint",
-    "format": "prettier --write \"**/*.{ts,tsx,md}\""
+    "lint-staged": "lint-staged",
+    "format": "prettier --write \"**/*.{ts,tsx,md,vue}\"",
+    "clean": "find . -name node_modules -o -name .next -type d -prune | xargs rm -rf",
+    "test": "turbo run test",
+    "test:watch": "turbo run test:watch",
+    "test:e2e": "turbo run test:e2e",
+    "e2e:chrome": "turbo run e2e:chrome",
+    "e2e:firefox": "turbo run e2e:firefox",
+    "e2e:edge": "turbo run e2e:edge"
   },
   "devDependencies": {
-    "eslint-config-custom": "workspace:*",
-    "prettier": "latest",
-    "turbo": "latest"
+    "@typescript-eslint/eslint-plugin": "^5.47.0",
+    "@typescript-eslint/parser": "^5.47.0",
+    "eslint-config-base": "workspace:0.0.0",
+    "eslint": "^8.30.0",
+    "husky": "^8.0.2",
+    "lint-staged": "^13.1.0",
+    "prettier": "^2.8.1",
+    "prettier-plugin-tailwindcss": "^0.2.1",
+    "shell-quote": "^1.7.4",
+    "turbo": "1.7.0",
+    "typescript": "^4.9.4",
+    "vitest": "^0.26.2"
   },
   "engines": {
-    "node": ">=14.0.0"
+    "node": ">=16.0.0"
   },
   "dependencies": {},
   "packageManager": "pnpm@7.14.0"
