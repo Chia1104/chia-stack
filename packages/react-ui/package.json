@@ -1,0 +1,45 @@
+{
+  "name": "@chia-stack/react-ui",
+  "version": "0.0.0",
+  "private": true,
+  "types": "./dist/index.d.ts",
+  "scripts": {
+    "build": "tsup && tailwindcss -i ./src/style/styles.css -o ./dist/styles.css",
+    "dev": "concurrently \"tsup --watch\" \"tailwindcss -i ./src/style/styles.css -o ./dist/styles.css --watch\"",
+    "clean": "rm -rf dist",
+    "lint": "eslint \"{src}/**/*.{ts,js,tsx,jsx}\" --fix"
+  },
+  "exports": {
+    ".": {
+      "require": "./dist/index.js",
+      "import": "./dist/index.mjs"
+    },
+    "./styles.css": "./dist/styles.css"
+  },
+  "files": [
+    "dist"
+  ],
+  "devDependencies": {
+    "@chia-stack/tailwind-config": "workspace:0.0.0",
+    "@types/react": "^18.0.26",
+    "@types/react-dom": "^18.0.9",
+    "classnames": "^2.3.2",
+    "concurrently": "^7.6.0",
+    "eslint-config-nextjs": "workspace:0.0.0",
+    "framer-motion": "^8.0.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-use": "^17.4.0",
+    "tailwindcss": "^3.2.4",
+    "tsconfig": "workspace:0.0.0",
+    "tsup": "^6.5.0",
+    "zod": "^3.20.2"
+  },
+  "peerDependencies": {
+    "react": ">=18",
+    "react-dom": ">=18"
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  }
+}
