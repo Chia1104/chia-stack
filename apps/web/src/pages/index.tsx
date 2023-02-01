@@ -16,8 +16,8 @@ const HomePage: NextPage = () => {
     }
   };
   return (
-    <main className="container mx-auto flex flex-col gap-10 test">
-      <h1 className="text-9xl">HomePage</h1>
+    <main className="container mx-auto flex flex-col gap-5 test">
+      <h1 className="text-4xl">HomePage</h1>
       <Input
         ref={inputRef}
         title="Email"
