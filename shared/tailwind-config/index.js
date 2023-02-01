@@ -1,5 +1,4 @@
-const colors = require("tailwindcss/colors");
-
+/** @type {import('tailwindcss').Config} */
 module.exports = {
   theme: {
     extend: {
@@ -15,7 +14,6 @@ module.exports = {
         ctw_white: "#ffffff",
         ctw_black: "#000000",
         ctw_code: "#24292e",
-        ...colors,
       },
     },
   },

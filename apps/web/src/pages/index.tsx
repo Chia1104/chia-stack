@@ -16,8 +16,8 @@ const HomePage: NextPage = () => {
     }
   };
   return (
-    <main className="container mx-auto flex flex-col gap-5 test">
-      <h1 className="text-4xl">HomePage</h1>
+    <main className="container mx-auto flex flex-col gap-5">
+      <h1 className="text-4xl text-primary bg-ctw_info">HomePage</h1>
       <Input
         ref={inputRef}
         title="Email"
@@ -26,7 +26,7 @@ const HomePage: NextPage = () => {
         placeholder="Email"
         className="w-80"
       />
-      <Button text="test" onClick={handleClick} />
+      <Button text="test" onClick={handleClick} className="bg-secondary" />
     </main>
   );
 };

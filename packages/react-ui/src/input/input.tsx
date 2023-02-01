@@ -43,7 +43,7 @@ const Input = forwardRef<InputRef, Props>((props, ref) => {
     errorClassName,
     ...rest
   } = props;
-  const [isValid, setIsValid] = useState(false);
+  const [isValid, setIsValid] = useState<boolean>(true);
   const [isFocus, setIsFocus] = useState(false);
   const id = useId();
   const inputRef = useRef<HTMLInputElement>(null);
@@ -89,7 +89,7 @@ const Input = forwardRef<InputRef, Props>((props, ref) => {
         onFocus={handleFocus}
         onBlur={handleBlur}
         className={cx(
-          "border-[#CBD2D7] w-full rounded-lg ctw-component-border-primary transition ease-in-out focus:outline-none ctw-component-bg-primary",
+          "border-[#CBD2D7] w-full rounded-lg ctw-component-border-primary transition ease-in-out focus:outline-none ctw-component-bg-primary p-1",
           !isValid &&
             "border-ctw_danger hover:cursor-not-allowed dark:border-ctw_danger dark:hover:cursor-not-allowed",
           isFocus && isValid && "border-ctw_primary dark:border-ctw_primary",
