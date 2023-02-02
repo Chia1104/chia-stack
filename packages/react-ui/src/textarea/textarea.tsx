@@ -4,7 +4,7 @@ import React, {
   useState,
   type ChangeEvent,
   type DetailedHTMLProps,
-  type InputHTMLAttributes,
+  type TextareaHTMLAttributes,
   useImperativeHandle,
   useRef,
 } from "react";
@@ -13,8 +13,8 @@ import { cn } from "../utils";
 
 interface Props
   extends DetailedHTMLProps<
-    InputHTMLAttributes<HTMLInputElement>,
-    HTMLInputElement
+    TextareaHTMLAttributes<HTMLTextAreaElement>,
+    HTMLTextAreaElement
   > {
   title?: string;
   error?: string;
@@ -23,18 +23,17 @@ interface Props
   schema?: ZodType<any>;
 }
 
-interface InputRef {
+interface TextAreaRef {
   getValidity: () => boolean;
-  getNativeInput: () => HTMLInputElement;
+  getNativeInput: () => HTMLTextAreaElement;
 }
 
-const Input = forwardRef<InputRef, Props>((props, ref) => {
+const Textarea = forwardRef<TextAreaRef, Props>((props, ref) => {
   const {
     title,
     error,
     titleClassName,
     schema,
-    type = "text",
     className,
     onChange,
     onBlur,
@@ -44,7 +43,7 @@ const Input = forwardRef<InputRef, Props>((props, ref) => {
   } = props;
   const [isValid, setIsValid] = useState<boolean>(true);
   const id = useId();
-  const inputRef = useRef<HTMLInputElement>(null);
+  const textareaRef = useRef<HTMLTextAreaElement>(null);
 
   useImperativeHandle(ref, () => ({
     getValidity: () => {
@@ -52,11 +51,11 @@ const Input = forwardRef<InputRef, Props>((props, ref) => {
       return true;
     },
     getNativeInput: () => {
-      return inputRef.current as HTMLInputElement;
+      return textareaRef.current as HTMLTextAreaElement;
     },
   }));
 
-  const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
+  const handleChange = (e: ChangeEvent<HTMLTextAreaElement>) => {
     if (schema) {
       const { value } = e.target;
       setIsValid(schema.safeParse(value).success);
@@ -67,17 +66,16 @@ const Input = forwardRef<InputRef, Props>((props, ref) => {
   return (
     <>
       {title && (
-        <label className={titleClassName} htmlFor={`${id}-input`}>
+        <label className={titleClassName} htmlFor={`${id}-textarea`}>
           {title}
         </label>
       )}
-      <input
-        ref={inputRef}
-        id={`${id}-input`}
+      <textarea
+        ref={textareaRef}
+        id={`${id}-textarea`}
         onChange={handleChange}
-        type={type}
         className={cn(
-          "w-full rounded border transition ease-in-out focus:outline-none ctw-component-bg-secondary p-1 disabled:cursor-not-allowed disable:border-ctw_danger disabled:opacity-50",
+          "h-20 w-full rounded border transition ease-in-out focus:outline-none ctw-component-bg-secondary py-2 px-3 disabled:cursor-not-allowed disable:border-ctw_danger disabled:opacity-50",
           isValid
             ? "dark:border-slate-700 focus:border-ctw_primary dark:focus:border-ctw_primary"
             : "border-ctw_danger",
@@ -92,7 +90,7 @@ const Input = forwardRef<InputRef, Props>((props, ref) => {
   );
 });
 
-Input.displayName = "Input";
+Textarea.displayName = "Input";
 
-export { type InputRef };
-export default Input;
+export { type TextAreaRef };
+export default Textarea;

@@ -5,6 +5,7 @@ import {
   type InputRef,
   AspectRatio,
   FadeIn,
+  Textarea,
 } from "@chia-stack/react-ui";
 import { z } from "zod";
 import { useRef } from "react";
@@ -12,6 +13,7 @@ import useDarkMode from "@/hooks/use-dark-mode";
 import Image from "next/image";
 
 const EmailSchema = z.string().email();
+const MessageSchema = z.string().min(10);
 
 const HomePage: NextPage = () => {
   const inputRef = useRef<InputRef>(null);
@@ -32,7 +34,15 @@ const HomePage: NextPage = () => {
         title="Email"
         type="email"
         schema={EmailSchema}
+        error="Invalid email"
         placeholder="Email"
+        className="w-80"
+      />
+      <Textarea
+        title="Message"
+        schema={MessageSchema}
+        error="At least 10 characters"
+        placeholder="Message"
         className="w-80"
       />
       <Button text="test" onClick={handleClick} className="bg-secondary" />
