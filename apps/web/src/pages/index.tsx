@@ -1,6 +1,6 @@
 import type { NextPage } from "next";
 import {
-  Button,
+  HeroButton,
   Input,
   type InputRef,
   AspectRatio,
@@ -45,8 +45,12 @@ const HomePage: NextPage = () => {
         placeholder="Message"
         className="w-80"
       />
-      <Button text="test" onClick={handleClick} className="bg-secondary" />
-      <Button text="Toggle theme" onClick={toggle} className="bg-secondary" />
+      <HeroButton onClick={handleClick} className="bg-secondary">
+        Log to console
+      </HeroButton>
+      <HeroButton onClick={toggle} className="bg-secondary">
+        Toggle theme
+      </HeroButton>
       <FadeIn>
         <AspectRatio ratio={16 / 9} className="bg-slate-50 dark:bg-slate-800">
           <Image

@@ -1,20 +1,8 @@
-﻿import React, {
-  type FC,
-  type ButtonHTMLAttributes,
-  type DetailedHTMLProps,
-} from "react";
+﻿import React, { type FC, type ComponentProps } from "react";
 import { cn } from "../utils";
 
-interface Props
-  extends DetailedHTMLProps<
-    ButtonHTMLAttributes<HTMLButtonElement>,
-    HTMLButtonElement
-  > {
-  text: string;
-}
-
-const Button: FC<Props> = (props) => {
-  const { text, disabled, className, ...rest } = props;
+const HeroButton: FC<ComponentProps<"button">> = (props) => {
+  const { children, disabled, className, ...rest } = props;
   return (
     <button
       disabled={disabled}
@@ -30,10 +18,10 @@ const Button: FC<Props> = (props) => {
             ? "text-gray-400 cursor-not-allowed"
             : "group-hover:-translate-x-1 group-hover:-translate-y-1"
         )}>
-        {text}
+        {children}
       </span>
     </button>
   );
 };
 
-export default Button;
+export default HeroButton;
