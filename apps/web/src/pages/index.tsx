@@ -1,8 +1,14 @@
 import type { NextPage } from "next";
-import { Button, Input, type InputRef } from "@chia-stack/react-ui";
+import {
+  Button,
+  Input,
+  type InputRef,
+  AspectRatio,
+} from "@chia-stack/react-ui";
 import { z } from "zod";
 import { useRef } from "react";
 import useDarkMode from "@/hooks/use-dark-mode";
+import Image from "next/image";
 
 const EmailSchema = z.string().email();
 
@@ -30,6 +36,14 @@ const HomePage: NextPage = () => {
       />
       <Button text="test" onClick={handleClick} className="bg-secondary" />
       <Button text="Toggle theme" onClick={toggle} className="bg-secondary" />
+      <AspectRatio ratio={16 / 9} className="bg-slate-50 dark:bg-slate-800">
+        <Image
+          src="https://opengraph-dev.zeabur.app/api/og"
+          alt="Zeabur"
+          fill
+          className="rounded-md object-cover"
+        />
+      </AspectRatio>
     </main>
   );
 };

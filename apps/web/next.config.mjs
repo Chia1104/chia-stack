@@ -35,6 +35,9 @@ const nextConfig = {
       "../.."
     ),
   },
+  images: {
+    domains: ["opengraph-dev.zeabur.app"],
+  },
   eslint: {
     ignoreDuringBuilds: true,
   },
