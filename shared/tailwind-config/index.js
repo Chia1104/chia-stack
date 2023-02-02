@@ -17,4 +17,5 @@ module.exports = {
       },
     },
   },
+  darkMode: "class",
 };

@@ -3,7 +3,7 @@
   type ButtonHTMLAttributes,
   type DetailedHTMLProps,
 } from "react";
-import cx from "classnames";
+import { cn } from "../utils";
 
 interface Props
   extends DetailedHTMLProps<
@@ -18,13 +18,13 @@ const Button: FC<Props> = (props) => {
   return (
     <button
       disabled={disabled}
-      className={cx(
+      className={cn(
         "group relative inline-flex transition ease-in-out rounded self-center bg-ctw_secondary dark:bg-ctw_primary",
         className
       )}
       {...rest}>
       <span
-        className={cx(
+        className={cn(
           "ctw-component-button-secondary transform text-base",
           disabled
             ? "text-gray-400 cursor-not-allowed"

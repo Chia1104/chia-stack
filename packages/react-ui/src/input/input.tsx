@@ -10,7 +10,7 @@ import React, {
   useRef,
 } from "react";
 import { ZodType } from "zod";
-import cx from "classnames";
+import { cn } from "../utils";
 
 interface Props
   extends DetailedHTMLProps<
@@ -78,9 +78,11 @@ const Input = forwardRef<InputRef, Props>((props, ref) => {
 
   return (
     <>
-      <label className={titleClassName} htmlFor={`${id}-input`}>
-        {title ?? ""}
-      </label>
+      {title && (
+        <label className={titleClassName} htmlFor={`${id}-input`}>
+          {title}
+        </label>
+      )}
       <input
         ref={inputRef}
         id={`${id}-input`}
@@ -88,17 +90,16 @@ const Input = forwardRef<InputRef, Props>((props, ref) => {
         type={type}
         onFocus={handleFocus}
         onBlur={handleBlur}
-        className={cx(
-          "border-[#CBD2D7] w-full rounded-lg ctw-component-border-primary transition ease-in-out focus:outline-none ctw-component-bg-primary p-1",
-          !isValid &&
-            "border-ctw_danger hover:cursor-not-allowed dark:border-ctw_danger dark:hover:cursor-not-allowed",
-          isFocus && isValid && "border-ctw_primary dark:border-ctw_primary",
+        className={cn(
+          "w-full rounded ctw-component-border-primary transition ease-in-out focus:outline-none ctw-component-bg-secondary p-1 shadow",
+          !isValid && "border-ctw_danger",
+          isFocus && isValid && "border-ctw_primary",
           className
         )}
         {...rest}
       />
-      {!isValid && (
-        <p className={cx("text-ctw_danger", errorClassName)}>{error ?? ""}</p>
+      {!isValid && error && (
+        <p className={cn("text-ctw_danger", errorClassName)}>{error ?? ""}</p>
       )}
     </>
   );

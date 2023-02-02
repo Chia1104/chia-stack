@@ -20,7 +20,7 @@ class LeagueFunny extends Document {
     return (
       <Html lang="zh-tw">
         <Head />
-        <body className="bg-ctx_primary scrollbar-thin scrollbar-thumb-gray-400 dark:scrollbar-thumb-ctx_primary scrollbar-thumb-rounded-full">
+        <body className="ctw-component-bg-primary scrollbar-thin scrollbar-thumb-gray-400 dark:scrollbar-thumb-ctx_primary scrollbar-thumb-rounded-full">
           <Main />
           <NextScript />
           <div id="__portal" />
