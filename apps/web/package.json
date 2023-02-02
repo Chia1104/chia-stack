@@ -3,6 +3,7 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
+    "analyze": "cross-env ANALYZE=true npm run build",
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
@@ -12,6 +13,8 @@
   },
   "dependencies": {
     "@chia-stack/react-ui": "workspace:0.0.0",
+    "@next/bundle-analyzer": "^13.1.6",
+    "cross-env": "^7.0.3",
     "next": "13.1.6",
     "next-themes": "^0.2.1",
     "react": "^18.2.0",

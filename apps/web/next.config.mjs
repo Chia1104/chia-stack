@@ -1,6 +1,11 @@
 // @ts-check
 import { dirname, join } from "path";
 import { fileURLToPath } from "url";
+import withBundleAnalyzerImport from "@next/bundle-analyzer";
+
+const withBundleAnalyzer = withBundleAnalyzerImport({
+  enabled: process.env.ANALYZE === "true",
+});
 
 const securityHeaders = [
   {
@@ -51,7 +56,7 @@ const nextConfig = {
   },
 };
 
-const plugins = [];
+const plugins = [withBundleAnalyzer];
 
 const nextComposePlugins = plugins.reduce(
   (acc, plugin) => plugin(acc),
