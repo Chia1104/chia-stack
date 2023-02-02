@@ -1,2 +1,2 @@
 export { default } from "./textarea";
-export type { TextAreaRef } from "./textarea";
+export type { TextareaRef } from "./textarea";

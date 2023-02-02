@@ -18,12 +18,12 @@ interface Props extends ComponentProps<"textarea"> {
   schema?: ZodType<any>;
 }
 
-interface TextAreaRef {
+interface TextareaRef {
   getValidity: () => boolean;
   getNativeInput: () => HTMLTextAreaElement;
 }
 
-const Textarea = forwardRef<TextAreaRef, Props>((props, ref) => {
+const Textarea = forwardRef<TextareaRef, Props>((props, ref) => {
   const {
     title,
     error,
@@ -87,5 +87,5 @@ const Textarea = forwardRef<TextAreaRef, Props>((props, ref) => {
 
 Textarea.displayName = "Input";
 
-export { type TextAreaRef };
+export { type TextareaRef };
 export default Textarea;
