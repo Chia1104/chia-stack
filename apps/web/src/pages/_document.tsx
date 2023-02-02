@@ -7,7 +7,7 @@ import Document, {
   NextScript,
 } from "next/document";
 
-class LeagueFunny extends Document {
+class WebDoc extends Document {
   static async getInitialProps(
     ctx: DocumentContext
   ): Promise<DocumentInitialProps> {
@@ -30,4 +30,4 @@ class LeagueFunny extends Document {
   }
 }
 
-export default LeagueFunny;
+export default WebDoc;

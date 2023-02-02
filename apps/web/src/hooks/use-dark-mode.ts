@@ -1,4 +1,4 @@
-import { useMediaQuery } from "usehooks-ts";
+import useMediaQuery from "./use-media-query";
 import { useTheme } from "next-themes";
 import { useEffect } from "react";
 
