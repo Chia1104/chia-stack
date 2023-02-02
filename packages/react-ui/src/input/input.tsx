@@ -74,7 +74,7 @@ const Input = forwardRef<InputRef, Props>((props, ref) => {
         className={cn(
           "w-full rounded border transition ease-in-out focus:outline-none ctw-component-bg-secondary p-1 disabled:cursor-not-allowed disable:border-ctw_danger disabled:opacity-50",
           isValid
-            ? "dark:border-slate-700 focus:border-ctw_primary dark:focus:border-ctw_primary"
+            ? "dark:border-slate-700 focus:border-ctw_secondary dark:focus:border-ctw_primary"
             : "border-ctw_danger",
           className
         )}

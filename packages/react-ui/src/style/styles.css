@@ -26,6 +26,6 @@
   }
 
   .ctw-component-border-primary {
-    @apply border border-ctw_primary
+    @apply border dark:border-ctw_primary border-ctw_secondary
   }
 }

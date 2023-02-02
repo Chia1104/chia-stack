@@ -72,7 +72,7 @@ const Textarea = forwardRef<TextAreaRef, Props>((props, ref) => {
         className={cn(
           "h-20 w-full rounded border transition ease-in-out focus:outline-none ctw-component-bg-secondary py-2 px-3 disabled:cursor-not-allowed disable:border-ctw_danger disabled:opacity-50",
           isValid
-            ? "dark:border-slate-700 focus:border-ctw_primary dark:focus:border-ctw_primary"
+            ? "dark:border-slate-700 focus:border-ctw_secondary dark:focus:border-ctw_primary"
             : "border-ctw_danger",
           className
         )}
