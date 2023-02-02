@@ -45,12 +45,8 @@ const HomePage: NextPage = () => {
         placeholder="Message"
         className="w-80"
       />
-      <HeroButton onClick={handleClick} className="bg-secondary">
-        Log to console
-      </HeroButton>
-      <HeroButton onClick={toggle} className="bg-secondary">
-        Toggle theme
-      </HeroButton>
+      <HeroButton onClick={handleClick}>Log to console</HeroButton>
+      <HeroButton onClick={toggle}>Toggle theme</HeroButton>
       <FadeIn>
         <AspectRatio ratio={16 / 9} className="bg-slate-50 dark:bg-slate-800">
           <Image

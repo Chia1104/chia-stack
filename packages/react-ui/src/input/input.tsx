@@ -3,19 +3,14 @@ import React, {
   useId,
   useState,
   type ChangeEvent,
-  type DetailedHTMLProps,
-  type InputHTMLAttributes,
+  type ComponentProps,
   useImperativeHandle,
   useRef,
 } from "react";
 import { ZodType } from "zod";
 import { cn } from "../utils";
 
-interface Props
-  extends DetailedHTMLProps<
-    InputHTMLAttributes<HTMLInputElement>,
-    HTMLInputElement
-  > {
+interface Props extends ComponentProps<"input"> {
   title?: string;
   error?: string;
   titleClassName?: string;

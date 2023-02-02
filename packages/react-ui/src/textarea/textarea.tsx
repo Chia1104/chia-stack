@@ -3,19 +3,14 @@ import React, {
   useId,
   useState,
   type ChangeEvent,
-  type DetailedHTMLProps,
-  type TextareaHTMLAttributes,
+  type ComponentProps,
   useImperativeHandle,
   useRef,
 } from "react";
 import { ZodType } from "zod";
 import { cn } from "../utils";
 
-interface Props
-  extends DetailedHTMLProps<
-    TextareaHTMLAttributes<HTMLTextAreaElement>,
-    HTMLTextAreaElement
-  > {
+interface Props extends ComponentProps<"textarea"> {
   title?: string;
   error?: string;
   titleClassName?: string;
