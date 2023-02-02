@@ -6,6 +6,7 @@ import {
   AspectRatio,
   FadeIn,
   Textarea,
+  type TextareaRef,
 } from "@chia-stack/react-ui";
 import { z } from "zod";
 import { useRef } from "react";
@@ -17,11 +18,14 @@ const MessageSchema = z.string().min(10);
 
 const HomePage: NextPage = () => {
   const inputRef = useRef<InputRef>(null);
+  const textareaRef = useRef<TextareaRef>(null);
   const handleClick = () => {
-    if (inputRef.current) {
+    if (inputRef.current && textareaRef.current) {
       console.log(
         inputRef.current.getValidity(),
-        inputRef.current.getNativeInput().value
+        inputRef.current.getNativeInput().value,
+        textareaRef.current.getValidity(),
+        textareaRef.current.getNativeInput().value
       );
     }
   };
@@ -39,6 +43,7 @@ const HomePage: NextPage = () => {
         className="w-80"
       />
       <Textarea
+        ref={textareaRef}
         title="Message"
         schema={MessageSchema}
         error="At least 10 characters"
