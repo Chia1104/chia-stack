@@ -4,6 +4,7 @@ import {
   Input,
   type InputRef,
   AspectRatio,
+  FadeIn,
 } from "@chia-stack/react-ui";
 import { z } from "zod";
 import { useRef } from "react";
@@ -36,14 +37,16 @@ const HomePage: NextPage = () => {
       />
       <Button text="test" onClick={handleClick} className="bg-secondary" />
       <Button text="Toggle theme" onClick={toggle} className="bg-secondary" />
-      <AspectRatio ratio={16 / 9} className="bg-slate-50 dark:bg-slate-800">
-        <Image
-          src="https://opengraph-dev.zeabur.app/api/og"
-          alt="Zeabur"
-          fill
-          className="rounded-md object-cover"
-        />
-      </AspectRatio>
+      <FadeIn>
+        <AspectRatio ratio={16 / 9} className="bg-slate-50 dark:bg-slate-800">
+          <Image
+            src="https://opengraph-dev.zeabur.app/api/og"
+            alt="Zeabur"
+            fill
+            className="rounded-md object-cover"
+          />
+        </AspectRatio>
+      </FadeIn>
     </main>
   );
 };
