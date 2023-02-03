@@ -10,6 +10,7 @@ module.exports = {
         primary: "#00e1ff",
         secondary: "#ff00e1",
         ...config.theme.extend.colors,
+        ctw_primary: "#00e1ff",
       },
     },
   },

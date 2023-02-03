@@ -10,6 +10,7 @@ import {
   AvatarFallback,
   AvatarImage,
   type TextareaRef,
+  Button,
 } from "@chia-stack/react-ui";
 import { z } from "zod";
 import { useRef } from "react";
@@ -65,6 +66,36 @@ const HomePage: NextPage = () => {
       />
       <HeroButton onClick={handleClick}>Log to console</HeroButton>
       <HeroButton onClick={toggle}>Toggle theme</HeroButton>
+      <div className="flex-wrap gap-2 justify-center items-center inline-flex">
+        <Button className="w-20">Default</Button>
+        <Button className="w-20" variant="outline">
+          Outline
+        </Button>
+        <Button className="w-20" variant="ghost">
+          Ghost
+        </Button>
+        <Button className="w-20" variant="link">
+          Link
+        </Button>
+        <Button className="w-20" variant="success">
+          Success
+        </Button>
+        <Button className="w-20" variant="danger">
+          Danger
+        </Button>
+        <Button className="w-20" variant="successOutline">
+          Success
+        </Button>
+        <Button className="w-20" variant="dangerOutline">
+          Danger
+        </Button>
+        <Button className="w-20" variant="warning">
+          Warning
+        </Button>
+        <Button className="w-20" variant="warningOutline">
+          Warning
+        </Button>
+      </div>
       <FadeIn>
         <AspectRatio ratio={16 / 9} className="bg-slate-50 dark:bg-slate-800">
           <Image
