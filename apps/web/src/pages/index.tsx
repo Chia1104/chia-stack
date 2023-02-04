@@ -80,13 +80,25 @@ const HomePage: NextPage = () => {
         <Button className="w-20" variant="success">
           Success
         </Button>
-        <Button className="w-20" variant="danger">
-          Danger
-        </Button>
         <Button className="w-20" variant="successOutline">
           Success
         </Button>
+        <Button className="w-20" variant="successGhost">
+          Success
+        </Button>
+        <Button className="w-20" variant="successLink">
+          Success
+        </Button>
+        <Button className="w-20" variant="danger">
+          Danger
+        </Button>
         <Button className="w-20" variant="dangerOutline">
+          Danger
+        </Button>
+        <Button className="w-20" variant="dangerGhost">
+          Danger
+        </Button>
+        <Button className="w-20" variant="dangerLink">
           Danger
         </Button>
         <Button className="w-20" variant="warning">
@@ -94,6 +106,17 @@ const HomePage: NextPage = () => {
         </Button>
         <Button className="w-20" variant="warningOutline">
           Warning
+        </Button>
+        <Button className="w-20" variant="warningGhost">
+          Warning
+        </Button>
+        <Button className="w-20" variant="warningLink">
+          Warning
+        </Button>
+        <Button
+          className="w-20 dark:border-primary border-secondary hover:bg-secondary/20 dark:hover:bg-primary/20"
+          variant="outline">
+          Custom
         </Button>
       </div>
       <FadeIn>

@@ -22,12 +22,24 @@ const buttonVariants = cva(
         success: "bg-ctw_success text-white hover:bg-ctw_success/80",
         successOutline:
           "bg-transparent border border-ctw_success text-ctw_success hover:bg-ctw_success/10",
+        successGhost:
+          "bg-transparent hover:bg-ctw_success/10 dark:hover:bg-ctw_success/10 dark:text-slate-100 dark:hover:text-slate-100 data-[state=open]:bg-transparent dark:data-[state=open]:bg-transparent",
+        successLink:
+          "bg-transparent underline-offset-4 hover:underline text-ctw_success hover:bg-transparent dark:hover:bg-transparent",
         danger: "bg-ctw_danger text-white hover:bg-ctw_danger/80",
         dangerOutline:
           "bg-transparent border border-ctw_danger text-ctw_danger hover:bg-ctw_danger/10",
+        dangerGhost:
+          "bg-transparent hover:bg-ctw_danger/10 dark:hover:bg-ctw_danger/10 dark:text-slate-100 dark:hover:text-slate-100 data-[state=open]:bg-transparent dark:data-[state=open]:bg-transparent",
+        dangerLink:
+          "bg-transparent underline-offset-4 hover:underline text-ctw_danger hover:bg-transparent dark:hover:bg-transparent",
         warning: "bg-ctw_warning text-white hover:bg-ctw_warning/80",
         warningOutline:
           "bg-transparent border border-ctw_warning text-ctw_warning hover:bg-ctw_warning/10",
+        warningGhost:
+          "bg-transparent hover:bg-ctw_warning/10 dark:hover:bg-ctw_warning/10 dark:text-slate-100 dark:hover:text-slate-100 data-[state=open]:bg-transparent dark:data-[state=open]:bg-transparent",
+        warningLink:
+          "bg-transparent underline-offset-4 hover:underline text-ctw_warning hover:bg-transparent dark:hover:bg-transparent",
       },
       size: {
         default: "h-10 py-2 px-4",
@@ -42,6 +54,18 @@ const buttonVariants = cva(
   }
 );
 
+/**
+ * Button component
+ * @param {ButtonProps} props
+ *
+ * @example
+ * <Button variant="outline" size="sm">Button</Button>
+ *
+ * The component is a wrapper around the native button element.
+ * It supports all the props that a native button element supports, and also supports framer-motion props.
+ *
+ * **I still try to simplify the props, make it more intuitive and easier to use.**
+ */
 const Button = forwardRef<HTMLButtonElement, ButtonProps & MotionProps>(
   ({ className, children, variant, size, ...props }) => {
     return (
