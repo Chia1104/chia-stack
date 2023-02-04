@@ -39,7 +39,7 @@ const HomePage: NextPage = () => {
   const { toggle } = useDarkMode();
   return (
     <main className="container mx-auto flex flex-col gap-5">
-      <h1 className="text-4xl bg-ctw_primary">HomePage</h1>
+      <h1 className="text-4xl dark:bg-ctw_primary">HomePage</h1>
       <Avatar className="w-20 h-20 bg-gradient-to-r from-[#6EE7B7] via-[#3B82F6] to-[#9333EA] p-1">
         <AvatarImage
           src="https://github.com/chia1104.png"
