@@ -3,6 +3,7 @@ export * from "./avatar";
 export { default as Button } from "./button";
 export * from "./button";
 export { default as HeroButton } from "./hero-button";
+export * from "./hover-card";
 export { default as FadeIn } from "./fade-in";
 export { default as Input } from "./input";
 export * from "./input";
