@@ -1,8 +1,27 @@
 import type { NextApiRequest, NextApiResponse } from "next";
+import Cors from "cors";
 
 const API_KEY = process.env.API_KEY;
 
+const cors = Cors({
+  methods: ["GET", "POST", "PUT", "DELETE"],
+  origin: "*",
+});
+
+function runMiddleware(req: NextApiRequest, res: NextApiResponse, fn: any) {
+  return new Promise((resolve, reject) => {
+    fn(req, res, (result: any) => {
+      if (result instanceof Error) {
+        return reject(result);
+      }
+
+      return resolve(result);
+    });
+  });
+}
+
 export default async function (req: NextApiRequest, res: NextApiResponse) {
+  await runMiddleware(req, res, cors);
   switch (req.method) {
     case "GET":
       try {
