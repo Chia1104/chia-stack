@@ -33,7 +33,7 @@ export default async function (req: NextApiRequest, res: NextApiResponse) {
           },
         });
         const data = await respond.json();
-        return res.status(200).json(data);
+        return res.status(respond.status).json(data);
       } catch (error) {
         return res.status(500).json({ error: "Internal server error" });
       }
@@ -48,7 +48,7 @@ export default async function (req: NextApiRequest, res: NextApiResponse) {
           body: JSON.stringify(req.body),
         });
         const data = await respond.json();
-        return res.status(200).json(data);
+        return res.status(respond.status).json(data);
       } catch (error) {
         return res.status(500).json({ error: "Internal server error" });
       }
@@ -63,7 +63,7 @@ export default async function (req: NextApiRequest, res: NextApiResponse) {
           body: JSON.stringify(req.body),
         });
         const data = await respond.json();
-        return res.status(200).json(data);
+        return res.status(respond.status).json(data);
       } catch (error) {
         return res.status(500).json({ error: "Internal server error" });
       }
@@ -78,7 +78,7 @@ export default async function (req: NextApiRequest, res: NextApiResponse) {
           body: JSON.stringify(req.body),
         });
         const data = await respond.json();
-        return res.status(200).json(data);
+        return res.status(respond.status).json(data);
       } catch (error) {
         return res.status(500).json({ error: "Internal server error" });
       }
