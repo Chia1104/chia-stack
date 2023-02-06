@@ -9,7 +9,10 @@
       "dependsOn": [
         "^build"
       ],
-      "outputs": [".next/**"]
+      "outputs": [".next/**"],
+      "env": [
+        "API_KEY"
+      ]
     },
     "lint": {
       "outputs": []
@@ -18,5 +21,10 @@
       "cache": false,
       "persistent": true
     }
-  }
+  },
+  "globalEnv": [
+    "HOST",
+    "PORT",
+    "NODE_ENV"
+  ]
 }
