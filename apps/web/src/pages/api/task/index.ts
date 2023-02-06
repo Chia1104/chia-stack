@@ -1,4 +1,4 @@
-import type { NextApiHandler, NextApiRequest, NextApiResponse } from "next";
+import type { NextApiRequest, NextApiResponse } from "next";
 
 const API_KEY = process.env.API_KEY;
 
@@ -16,7 +16,7 @@ export default async function (req: NextApiRequest, res: NextApiResponse) {
         const data = await respond.json();
         return res.status(200).json(data);
       } catch (error) {
-        return res.status(500).json({ error: error.message });
+        return res.status(500).json({ error: "Internal server error" });
       }
     case "POST":
       try {
@@ -31,7 +31,7 @@ export default async function (req: NextApiRequest, res: NextApiResponse) {
         const data = await respond.json();
         return res.status(200).json(data);
       } catch (error) {
-        return res.status(500).json({ error: error.message });
+        return res.status(500).json({ error: "Internal server error" });
       }
     case "PUT":
       try {
@@ -46,7 +46,7 @@ export default async function (req: NextApiRequest, res: NextApiResponse) {
         const data = await respond.json();
         return res.status(200).json(data);
       } catch (error) {
-        return res.status(500).json({ error: error.message });
+        return res.status(500).json({ error: "Internal server error" });
       }
     case "DELETE":
       try {
@@ -61,7 +61,7 @@ export default async function (req: NextApiRequest, res: NextApiResponse) {
         const data = await respond.json();
         return res.status(200).json(data);
       } catch (error) {
-        return res.status(500).json({ error: error.message });
+        return res.status(500).json({ error: "Internal server error" });
       }
     default:
       return res.status(405).json({ error: "Method not allowed" });
