@@ -1,3 +1,4 @@
+export * from "./accordion";
 export { default as AspectRatio } from "./aspect-ratio";
 export * from "./avatar";
 export { default as Button } from "./button";
