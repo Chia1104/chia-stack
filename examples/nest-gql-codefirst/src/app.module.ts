@@ -4,6 +4,7 @@ import { ApolloDriver, type ApolloDriverConfig } from "@nestjs/apollo";
 import { ConfigModule } from "@nestjs/config";
 import { join } from "path";
 import { ProductsModule } from "@/modules";
+import { AppController } from "./app.controller";
 
 @Module({
   imports: [
@@ -11,9 +12,14 @@ import { ProductsModule } from "@/modules";
     ConfigModule.forRoot(),
     GraphQLModule.forRoot<ApolloDriverConfig>({
       driver: ApolloDriver,
-      autoSchemaFile: join(process.cwd(), "src/schema.gql"),
+      autoSchemaFile: join(process.cwd(), "schema.gql"),
       buildSchemaOptions: { dateScalarMode: "timestamp" },
+      debug: process.env.NODE_ENV !== "production",
+      playground: true,
+      introspection: process.env.NODE_ENV !== "production",
+      persistedQueries: false,
     }),
   ],
+  controllers: [AppController],
 })
 export class AppModule {}

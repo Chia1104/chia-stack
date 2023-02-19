@@ -4,7 +4,7 @@ import {
   Body,
   Get,
   Param,
-  Patch,
+  Put,
   NotFoundException,
   InternalServerErrorException,
 } from "@nestjs/common";
@@ -46,7 +46,7 @@ export class ProductsController {
     }
   }
 
-  @Patch(":id")
+  @Put(":id")
   @ApiOperation({ summary: "Update product by id(_id)" })
   async updateProduct(
     @Param("id") _id: string,
