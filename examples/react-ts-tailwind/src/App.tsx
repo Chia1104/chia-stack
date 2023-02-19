@@ -7,7 +7,7 @@ function App() {
   const [count, setCount] = useState(0);
 
   return (
-    <div className={cn("App flex flex-col gap-5 justify-center items-center")}>
+    <div className={cn("App flex flex-col items-center justify-center gap-5")}>
       <div className="flex gap-5">
         <a href="https://vitejs.dev" target="_blank" rel="noreferrer">
           <img src="/vite.svg" className="logo" alt="Vite logo" />
@@ -26,7 +26,7 @@ function App() {
         </p>
       </div>
       <p className="read-the-docs">
-        Create with '@chia-stack/react-ts-tailwindcss' template
+        Create with '@chia-stack/react-ts-tailwind' template
       </p>
     </div>
   );

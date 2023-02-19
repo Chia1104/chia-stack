@@ -6,9 +6,7 @@ describe("App", () => {
   test("render: Create with '@chia-stack/react-ts-tailwindcss' template", () => {
     render(<App />);
     expect(
-      screen.getByText(
-        "Create with '@chia-stack/react-ts-tailwindcss' template"
-      )
+      screen.getByText("Create with '@chia-stack/react-ts-tailwind' template")
     ).toBeDefined();
   });
 });

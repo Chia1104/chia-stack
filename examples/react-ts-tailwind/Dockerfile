@@ -17,7 +17,7 @@ ARG \
 ENV \
     VITE_ENV_EXAMPLE=${VITE_ENV_EXAMPLE}
 
-RUN pnpm build
+RUN yarn build
 
 FROM nginx:alpine
 COPY /docker/nginx.conf /etc/nginx/conf.d/configfile.template
