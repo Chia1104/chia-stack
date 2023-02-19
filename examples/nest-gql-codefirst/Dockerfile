@@ -29,7 +29,7 @@ ARG DATABASE_URL
 ENV NODE_ENV=production \
     HOST=0.0.0.0 \
     PORT=8080 \
-    DATABASE_URL=postgres://root:Jg780F639hwd@infra.zeabur.com:31972/root
+    DATABASE_URL=${DATABASE_URL}
 
 EXPOSE 8080
 
