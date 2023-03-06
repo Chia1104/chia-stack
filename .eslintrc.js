@@ -76,7 +76,11 @@ module.exports = {
     {
       files: "**/*.{ts,tsx,cts,mts}",
       parserOptions: {
-        project: ["packages/*/tsconfig.json", "apps/*/tsconfig.json"],
+        project: [
+          "packages/*/tsconfig.json",
+          "apps/*/tsconfig.json",
+          "tsconfig.eslint.json",
+        ],
       },
       rules: {
         "@typescript-eslint/ban-ts-comment": "off",
