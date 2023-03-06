@@ -7,7 +7,7 @@ const HeroButton: FC<ComponentProps<"button">> = (props) => {
     <button
       disabled={disabled}
       className={cn(
-        "group relative inline-flex transition ease-in-out rounded self-center bg-ctw_secondary dark:bg-ctw_primary",
+        "bg-ctw_secondary dark:bg-ctw_primary group relative inline-flex self-center rounded transition ease-in-out",
         className
       )}
       {...rest}>
@@ -15,7 +15,7 @@ const HeroButton: FC<ComponentProps<"button">> = (props) => {
         className={cn(
           "ctw-component-button-secondary transform text-base",
           disabled
-            ? "text-gray-400 cursor-not-allowed"
+            ? "cursor-not-allowed text-gray-400"
             : "group-hover:-translate-x-1 group-hover:-translate-y-1"
         )}>
         {children}

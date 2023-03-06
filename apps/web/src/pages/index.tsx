@@ -44,7 +44,7 @@ const HomePage: NextPage = () => {
   return (
     <main className="container mx-auto flex flex-col gap-5">
       <h1 className="text-4xl">HomePage</h1>
-      <Avatar className="w-20 h-20 bg-gradient-to-r from-[#6EE7B7] via-[#3B82F6] to-[#9333EA] p-1">
+      <Avatar className="h-20 w-20 bg-gradient-to-r from-[#6EE7B7] via-[#3B82F6] to-[#9333EA] p-1">
         <AvatarImage
           src="https://github.com/chia1104.png"
           alt="chia1104"
@@ -73,7 +73,7 @@ const HomePage: NextPage = () => {
       />
       <HeroButton onClick={handleClick}>Log to console</HeroButton>
       <HeroButton onClick={toggle}>Toggle theme</HeroButton>
-      <div className="flex-wrap gap-2 justify-center items-center inline-flex">
+      <div className="inline-flex flex-wrap items-center justify-center gap-2">
         <Button className="w-20">Default</Button>
         <Button className="w-20" variant="outline">
           Outline
@@ -121,7 +121,7 @@ const HomePage: NextPage = () => {
           Warning
         </Button>
         <Button
-          className="w-20 dark:border-primary border-secondary hover:bg-secondary/20 dark:hover:bg-primary/20"
+          className="dark:border-primary border-secondary hover:bg-secondary/20 dark:hover:bg-primary/20 w-20"
           variant="outline">
           Custom
         </Button>

@@ -72,9 +72,9 @@ const Input = forwardRef<InputRef, Props>((props, ref) => {
         onChange={handleChange}
         type={type}
         className={cn(
-          "w-full rounded border transition ease-in-out focus:outline-none ctw-component-bg-secondary p-1 disabled:cursor-not-allowed disable:border-ctw_danger disabled:opacity-50 focus:shadow-md",
+          "ctw-component-bg-secondary disable:border-ctw_danger w-full rounded border p-1 transition ease-in-out focus:shadow-md focus:outline-none disabled:cursor-not-allowed disabled:opacity-50",
           isValid
-            ? "dark:border-slate-700 focus:border-ctw_secondary focus:shadow-ctw_secondary/40 dark:focus:border-ctw_primary dark:focus:shadow-ctw_primary/40"
+            ? "focus:border-ctw_secondary focus:shadow-ctw_secondary/40 dark:focus:border-ctw_primary dark:focus:shadow-ctw_primary/40 dark:border-slate-700"
             : "border-ctw_danger focus:shadow-ctw_danger/40",
           className
         )}
