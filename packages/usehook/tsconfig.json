@@ -24,12 +24,6 @@
     "experimentalDecorators": true,
     "emitDecoratorMetadata": true,
     "resolveJsonModule": true,
-    "lib": [
-      "dom",
-      "es5",
-      "scripthost",
-      "es2015.proxy"
-    ]
   },
   "include": ["src"],
   "exclude": ["dist", "build", "node_modules"]

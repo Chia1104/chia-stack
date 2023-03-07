@@ -46,6 +46,7 @@ importers:
     specifiers:
       '@chia-stack/react-ui': workspace:0.0.0
       '@chia-stack/tailwind-config': workspace:0.0.0
+      '@chia-stack/usehook': workspace:0.0.0
       '@next/bundle-analyzer': ^13.1.6
       '@types/cors': ^2.8.13
       '@types/node': ^18.11.18
@@ -76,6 +77,7 @@ importers:
       zod: 3.20.2
     devDependencies:
       '@chia-stack/tailwind-config': link:../../shared/tailwind-config
+      '@chia-stack/usehook': link:../../packages/usehook
       '@types/cors': 2.8.13
       '@types/node': 18.11.18
       '@types/react': 18.0.27

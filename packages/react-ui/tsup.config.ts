@@ -5,5 +5,5 @@ export default defineConfig({
   minify: true,
   dts: true,
   format: ["cjs", "esm"],
-  external: ["react"],
+  external: ["react", "@chia-stack/usehook"],
 });

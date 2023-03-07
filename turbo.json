@@ -6,15 +6,31 @@
       "outputs": ["dist/**", ".next/**"]
     },
     "web#build": {
-      "dependsOn": [
-        "^build"
-      ],
+      "dependsOn": ["^build"],
       "outputs": [".next/**"],
-      "env": [
-        "API_KEY"
-      ]
+      "env": ["API_KEY"]
     },
     "lint": {
+      "dependsOn": ["^build"],
+      "cache": true
+    },
+    "type:check": {
+      "cache": true
+    },
+    "test": {
+      "dependsOn": ["^build"],
+      "outputs": ["coverage/**"],
+      "cache": true
+    },
+    "e2e:chrome": {
+      "dependsOn": ["^build"],
+      "outputs": []
+    },
+    "e2e:edge": {
+      "dependsOn": ["^build"],
+      "outputs": []
+    },
+    "test:watch": {
       "outputs": []
     },
     "dev": {
@@ -22,9 +38,5 @@
       "persistent": true
     }
   },
-  "globalEnv": [
-    "HOST",
-    "PORT",
-    "NODE_ENV"
-  ]
+  "globalEnv": ["HOST", "PORT", "NODE_ENV"]
 }

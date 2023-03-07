@@ -18,9 +18,10 @@ import {
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
+  Modal,
 } from "@chia-stack/react-ui";
 import { z } from "zod";
-import { useRef } from "react";
+import { useRef, useState } from "react";
 import useDarkMode from "@/hooks/use-dark-mode";
 import Image from "next/image";
 
@@ -41,6 +42,7 @@ const HomePage: NextPage = () => {
     }
   };
   const { toggle } = useDarkMode();
+  const [isOpen, setIsOpen] = useState(false);
   return (
     <main className="container mx-auto flex flex-col gap-5">
       <h1 className="text-4xl">HomePage</h1>
@@ -73,6 +75,10 @@ const HomePage: NextPage = () => {
       />
       <HeroButton onClick={handleClick}>Log to console</HeroButton>
       <HeroButton onClick={toggle}>Toggle theme</HeroButton>
+      <HeroButton onClick={() => setIsOpen(true)}>Open modal</HeroButton>
+      <Modal isOpen={isOpen} handleModal={() => setIsOpen(false)}>
+        <div>test</div>
+      </Modal>
       <div className="inline-flex flex-wrap items-center justify-center gap-2">
         <Button className="w-20">Default</Button>
         <Button className="w-20" variant="outline">

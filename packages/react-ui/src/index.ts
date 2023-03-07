@@ -12,3 +12,4 @@ export { default as Text } from "./text";
 export { default as Textarea } from "./textarea";
 export * from "./textarea";
 export * from "./type.d";
+export { default as Modal } from "./modal";
