@@ -17,7 +17,7 @@ import {
   Accordion,
   AccordionContent,
   AccordionItem,
-  AccordionTrigger
+  AccordionTrigger,
 } from "@chia-stack/react-ui";
 import { z } from "zod";
 import { useRef } from "react";
