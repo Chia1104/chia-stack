@@ -90,6 +90,7 @@ importers:
   packages/react-ui:
     specifiers:
       '@chia-stack/tailwind-config': workspace:0.0.0
+      '@chia-stack/usehook': workspace:0.0.0
       '@radix-ui/react-accessible-icon': ^1.0.1
       '@radix-ui/react-accordion': ^1.1.0
       '@radix-ui/react-alert-dialog': ^1.0.2
@@ -132,6 +133,7 @@ importers:
       zod: ^3.20.2
     devDependencies:
       '@chia-stack/tailwind-config': link:../../shared/tailwind-config
+      '@chia-stack/usehook': link:../usehook
       '@radix-ui/react-accessible-icon': 1.0.1_biqbaboplfbrettd7655fr4n2y
       '@radix-ui/react-accordion': 1.1.0_biqbaboplfbrettd7655fr4n2y
       '@radix-ui/react-alert-dialog': 1.0.2_5ndqzdd6t4rivxsukjv3i3ak2q
