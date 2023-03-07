@@ -13,7 +13,6 @@
     "dev": "turbo run dev --parallel",
     "start": "turbo run start",
     "lint": "turbo run lint",
-    "lint-staged": "lint-staged",
     "format": "prettier --write \"**/*.{js,jsx,cjs,mjs,ts,tsx,md,vue}\"",
     "format:check": "prettier --check \"**/*.{js,jsx,cjs,mjs,ts,tsx,md,vue}\"",
     "clean": "find . -name node_modules -o -name .next -type d -prune | xargs rm -rf",
