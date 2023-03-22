@@ -34,8 +34,8 @@ const HomePage: NextPage = () => {
   const handleClick = () => {
     if (inputRef.current && textareaRef.current) {
       console.log(
-        inputRef.current.getValidity(),
-        inputRef.current.getNativeInput().value,
+        inputRef.current.isValid(),
+        inputRef.current.value,
         textareaRef.current.getValidity(),
         textareaRef.current.getNativeInput().value
       );
