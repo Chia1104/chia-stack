@@ -14,8 +14,9 @@ export interface UseInfiniteScrollResult {
 }
 
 const useInfiniteScroll = (
-  option: UseInfiniteScrollOptions
+  option?: UseInfiniteScrollOptions
 ): UseInfiniteScrollResult => {
+  option ??= {};
   const {
     hasMore,
     isLoading,
