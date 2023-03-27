@@ -4,10 +4,8 @@ const { fontFamily } = require("tailwindcss/defaultTheme");
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [`src/**/*.{js,ts,jsx,tsx}`],
-  ...config,
   theme: {
     extend: {
-      ...config.theme.extend,
       fontFamily: {
         sans: ["var(--font-sans)", ...fontFamily.sans],
       },
@@ -28,4 +26,5 @@ module.exports = {
     },
   },
   plugins: [require("tailwindcss-animate")],
+  presets: [config],
 };
