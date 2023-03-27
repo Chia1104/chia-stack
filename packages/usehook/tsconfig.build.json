@@ -24,6 +24,6 @@
     "experimentalDecorators": true,
     "resolveJsonModule": true,
   },
-  "include": ["src", "vitest.config.ts"],
-  "exclude": ["dist", "build", "node_modules"]
+  "include": ["src"],
+  "exclude": ["dist", "build", "node_modules", "**/*.test.ts", "**/*.test.tsx", "**/*.spec.ts", "**/*.spec.tsx"]
 }

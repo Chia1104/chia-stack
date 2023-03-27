@@ -9,7 +9,9 @@
     "dev": "tsup --watch",
     "clean": "rm -rf dist",
     "lint": "eslint \"src/**/*.{ts,js,tsx,jsx}\" --fix",
-    "type:check": "tsc --noEmit"
+    "type:check": "tsc --noEmit",
+    "test": "vitest run",
+    "test:watch": "vitest"
   },
   "exports": {
     ".": {

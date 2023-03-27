@@ -6,4 +6,5 @@ export default defineConfig({
   dts: true,
   format: ["cjs", "esm"],
   target: "es2020",
+  tsconfig: "tsconfig.build.json",
 });
