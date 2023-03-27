@@ -1,6 +1,7 @@
 {
+  "$schema": "https://json.schemastore.org/package",
   "name": "@chia-stack/usehook",
-  "version": "0.0.0",
+  "version": "0.0.1-beta.1",
   "private": true,
   "types": "./dist/index.d.ts",
   "scripts": {
@@ -30,6 +31,6 @@
     "react-dom": ">=18"
   },
   "engines": {
-    "node": ">=16.*"
+    "node": ">=16"
   }
 }

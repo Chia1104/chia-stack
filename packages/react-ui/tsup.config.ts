@@ -5,5 +5,5 @@ export default defineConfig({
   minify: true,
   dts: true,
   format: ["cjs", "esm"],
-  external: ["react", "@chia-stack/usehook"],
+  target: "es2020",
 });

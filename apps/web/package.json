@@ -12,7 +12,8 @@
     "test:watch": "vitest"
   },
   "dependencies": {
-    "@chia-stack/react-ui": "workspace:0.0.0",
+    "@chia-stack/react-ui": "workspace:*",
+    "@chia-stack/usehook": "workspace:*",
     "@next/bundle-analyzer": "^13.1.6",
     "cors": "^2.8.5",
     "cross-env": "^7.0.3",
@@ -23,8 +24,7 @@
     "zod": "^3.20.2"
   },
   "devDependencies": {
-    "@chia-stack/tailwind-config": "workspace:0.0.0",
-    "@chia-stack/usehook": "workspace:0.0.0",
+    "@chia-stack/tailwind-config": "workspace:*",
     "@types/cors": "^2.8.13",
     "@types/node": "^18.11.18",
     "@types/react": "^18.0.27",
