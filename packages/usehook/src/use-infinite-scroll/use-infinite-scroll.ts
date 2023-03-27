@@ -1,7 +1,7 @@
 import { useRef, useCallback } from "react";
 
 export interface UseInfiniteScrollOptions {
-  hasMore: boolean;
+  hasMore?: boolean;
   isLoading?: boolean;
   isError?: boolean;
   onLoadMore?: () => void;
