@@ -9,7 +9,8 @@
     "start": "next start",
     "lint": "next lint",
     "test": "vitest run",
-    "test:watch": "vitest"
+    "test:watch": "vitest",
+    "type:check": "tsc --noEmit"
   },
   "dependencies": {
     "@chia-stack/react-ui": "workspace:*",
