@@ -1,4 +1,5 @@
 {
+  "$schema": "https://json.schemastore.org/package",
   "name": "chia-stack",
   "version": "0.0.0",
   "private": true,
@@ -9,10 +10,10 @@
   ],
   "scripts": {
     "prepare": "husky install",
-    "build": "turbo run build",
+    "build": "turbo run build --parallel",
     "dev": "turbo run dev --parallel",
-    "start": "turbo run start",
-    "lint": "turbo run lint",
+    "start": "turbo run start --parallel",
+    "lint": "turbo run lint --parallel",
     "format": "prettier --write \"**/*.{js,jsx,cjs,mjs,ts,tsx,md,vue}\"",
     "format:check": "prettier --check \"**/*.{js,jsx,cjs,mjs,ts,tsx,md,vue}\"",
     "type:check": "turbo run type:check",
