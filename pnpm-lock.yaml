@@ -7,18 +7,12 @@ importers:
       '@next/eslint-plugin-next':
         specifier: 13.2.4
         version: 13.2.4
-      '@testing-library/react':
-        specifier: ^14.0.0
-        version: 14.0.0(react-dom@18.2.0)(react@18.2.0)
       '@typescript-eslint/eslint-plugin':
         specifier: ^5.57.0
         version: 5.57.0(@typescript-eslint/parser@5.57.0)(eslint@8.36.0)(typescript@5.0.2)
       '@typescript-eslint/parser':
         specifier: ^5.57.0
         version: 5.57.0(eslint@8.36.0)(typescript@5.0.2)
-      '@vitejs/plugin-react':
-        specifier: ^3.1.0
-        version: 3.1.0(vite@4.2.1)
       eslint:
         specifier: ^8.36.0
         version: 8.36.0
@@ -64,9 +58,6 @@ importers:
       typescript:
         specifier: ^5.0.2
         version: 5.0.2
-      vite:
-        specifier: ^4.2.1
-        version: 4.2.1(@types/node@18.15.10)
       vitest:
         specifier: ^0.29.7
         version: 0.29.7(jsdom@21.1.1)
@@ -224,12 +215,18 @@ importers:
       '@radix-ui/react-tooltip':
         specifier: ^1.0.5
         version: 1.0.5(@types/react@18.0.30)(react-dom@18.2.0)(react@18.2.0)
+      '@testing-library/react':
+        specifier: ^14.0.0
+        version: 14.0.0(react-dom@18.2.0)(react@18.2.0)
       '@types/react':
         specifier: ^18.0.30
         version: 18.0.30
       '@types/react-dom':
         specifier: ^18.0.11
         version: 18.0.11
+      '@vitejs/plugin-react':
+        specifier: ^3.1.0
+        version: 3.1.0(vite@4.2.1)
       class-variance-authority:
         specifier: ^0.4.0
         version: 0.4.0(typescript@5.0.2)
@@ -269,12 +266,18 @@ importers:
 
   packages/usehook:
     devDependencies:
+      '@testing-library/react':
+        specifier: ^14.0.0
+        version: 14.0.0(react-dom@18.2.0)(react@18.2.0)
       '@types/react':
         specifier: ^18.0.30
         version: 18.0.30
       '@types/react-dom':
         specifier: ^18.0.11
         version: 18.0.11
+      '@vitejs/plugin-react':
+        specifier: ^3.1.0
+        version: 3.1.0(vite@4.2.1)
       react:
         specifier: ^18.2.0
         version: 18.2.0
