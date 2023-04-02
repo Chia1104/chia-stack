@@ -1,15 +1,17 @@
 FROM node:18-alpine AS deps
-RUN apk add --no-cache libc6-compat
 
 WORKDIR /app
+
 COPY package.json pnpm-lock.yaml ./
 
-RUN yarn global add pnpm && \
+RUN apk add --no-cache libc6-compat && \
+    yarn global add pnpm && \
     pnpm i
 
 FROM node:18-alpine AS builder
 
 WORKDIR /app
+
 COPY --from=deps /app/node_modules ./node_modules
 COPY . .
 
@@ -27,8 +29,6 @@ RUN yarn prisma generate && \
 FROM node:18-alpine AS runner
 
 WORKDIR /app
-
-ENV NODE_ENV production
 
 RUN addgroup --system --gid 1001 nodejs
 RUN adduser --system --uid 1001 nextjs
@@ -55,12 +55,12 @@ ENV \
     NEXTAUTH_SECRET=${NEXTAUTH_SECRET} \
     GOOGLE_CLIENT_ID=${GOOGLE_CLIENT_ID} \
     GOOGLE_CLIENT_SECRET=${GOOGLE_CLIENT_SECRET} \
-    BASE_URL=${BASE_URL}
+    BASE_URL=${BASE_URL} \
+    NODE_ENV=production \
+    PORT=8080
 
 USER nextjs
 
 EXPOSE 8080
-
-ENV PORT 8080
 
 CMD ["node", "server.js"]
