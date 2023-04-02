@@ -11,10 +11,6 @@ RUN apk update && \
 
 FROM node:18-alpine AS installer
 
-RUN apk update && \
-    apk add --no-cache \
-    libc6-compat
-
 WORKDIR /app
 
 COPY --from=builder /app/out/json/ .
