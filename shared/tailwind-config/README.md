@@ -4,14 +4,30 @@ This package contains the TailwindCSS configuration for the [TailwindCSS](https:
 
 ## Development
 
-You can import the configuration in your `tailwind.config.js` by using the following import statement:
+You can import the configuration in your tailwind config file by using the following import statement:
+
+### TypeScript
+
+Make sure your tailwind version is at least 3.3.0.
+
+```ts
+import type { Config } from "tailwindcss"
+import basedConfig, { animation } from "@shared/tailwind-config"
+
+export default {
+  // other config
+  presets: [basedConfig, animation],
+} satisfies Config
+```
+
+### JavaScript
 
 ```js
-const config = require("@chia-stack/tailwind-config");
+const basedConfig = require("@shared/tailwind-config")
+const animation = require("@shared/tailwind-config/animation")
 
-/** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: [`src/**/*.{js,ts,jsx,tsx}`],
-  ...config,
-};
+  // other config
+  presets: [basedConfig],
+}
 ```

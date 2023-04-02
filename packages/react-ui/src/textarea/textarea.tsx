@@ -70,7 +70,7 @@ const Textarea = forwardRef<TextareaRef, Props>((props, ref) => {
         id={`${id}-textarea`}
         onChange={handleChange}
         className={cn(
-          "ctw-component-bg-secondary disable:border-ctw_danger w-full rounded border p-1 transition ease-in-out focus:shadow-md focus:outline-none disabled:cursor-not-allowed disabled:opacity-50",
+          "bg-ctw_white/90 dark:bg-ctw_dark/90 text-ctw_dark dark:text-ctw_white disable:border-ctw_danger w-full rounded border p-1 backdrop-blur-sm transition transition ease-in-out ease-in-out focus:shadow-md focus:outline-none disabled:cursor-not-allowed disabled:opacity-50",
           isValid
             ? "focus:border-ctw_secondary focus:shadow-ctw_secondary/40 dark:focus:border-ctw_primary dark:focus:shadow-ctw_primary/40 dark:border-slate-700"
             : "border-ctw_danger focus:shadow-ctw_danger/40",

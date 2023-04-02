@@ -73,7 +73,11 @@ const HomePage: NextPage = () => {
         placeholder="Message"
         className="w-80"
       />
-      <HeroButton onClick={handleClick}>Log to console</HeroButton>
+      <HeroButton
+        onClick={handleClick}
+        downClassName="bg-secondary dark:bg-primary">
+        Log to console
+      </HeroButton>
       <HeroButton onClick={toggle}>Toggle theme</HeroButton>
       <HeroButton onClick={() => setIsOpen(true)}>Open modal</HeroButton>
       <Modal isOpen={isOpen} handleModal={() => setIsOpen(false)}>

@@ -1,3 +1,5 @@
+const animation = require("./animation");
+
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   theme: {
@@ -19,3 +21,5 @@ module.exports = {
   },
   darkMode: "class",
 };
+
+module.exports.animation = animation;

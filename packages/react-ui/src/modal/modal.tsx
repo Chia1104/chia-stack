@@ -34,7 +34,7 @@ const Modal: FC<ModalProps> = (props) => {
           animate={isOpen ? "open" : "closed"}
           exit="closed"
           variants={ov}
-          className="ctw-component-modal">
+          className="fixed top-0 z-[999] flex h-full w-full items-center justify-center bg-[#00000040] dark:bg-[#000000b5]">
           <motion.div
             transition={{ duration: 0.5, type: "spring" }}
             initial="closed"
