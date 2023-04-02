@@ -24,7 +24,7 @@ export default {
 
 ```js
 const basedConfig = require("@shared/tailwind-config")
-const animation = require("@shared/tailwind-config/animation")
+const animation = require("@shared/tailwind-config")
 
 module.exports = {
   // other config
