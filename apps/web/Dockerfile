@@ -18,6 +18,11 @@ COPY --from=builder /app/out/pnpm-lock.yaml ./pnpm-lock.yaml
 COPY --from=builder /app/out/full/ .
 COPY turbo.json turbo.json
 
+ARG TURBO_TEAM \
+    TURBO_TOKEN
+ENV TURBO_TEAM=$TURBO_TEAM \
+    TURBO_TOKEN=$TURBO_TOKEN
+
 RUN apk update && \
     apk add --no-cache \
     libc6-compat && \
