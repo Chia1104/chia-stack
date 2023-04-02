@@ -5,7 +5,7 @@ export default {
   presets: [animation, basedConfig],
   content: [
     `src/**/*.{js,ts,jsx,tsx}`,
-    "node_modules/@chia-stack/react-ui/**/*.{js,ts,jsx,tsx}",
+    `node_modules/@chia-stack/react-ui/**/*.{js,ts,jsx,tsx}`,
   ],
   theme: {
     extend: {

@@ -2,7 +2,7 @@
   "$schema": "https://json.schemastore.org/package",
   "name": "@chia-stack/tailwind-config",
   "types": "index.d.ts",
-  "version": "0.0.0",
+  "version": "0.0.1-beta.1",
   "private": true,
   "main": "index.js",
   "devDependencies": {

@@ -16,7 +16,7 @@ import basedConfig, { animation } from "@shared/tailwind-config"
 
 export default {
   // other config
-  presets: [basedConfig, animation],
+  presets: [animation, basedConfig],
 } satisfies Config
 ```
 
@@ -28,6 +28,6 @@ const animation = require("@shared/tailwind-config/animation")
 
 module.exports = {
   // other config
-  presets: [basedConfig],
+  presets: [animation, basedConfig],
 }
 ```
