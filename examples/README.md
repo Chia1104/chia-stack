@@ -12,3 +12,4 @@ npx degit chia1104/chia-stack/examples/<EXAMPLE_NAME> <PROJECT_NAME>
 - [nest-gql-codefirst](./nest-gql-codefirst): NestJS with GraphQL(code first) and Prisma
 - [nextjs-t3](./nextjs-t3): NextJS(page) with T3 stack
 - [nextjs-app](./nextjs-app): NextJS with app directory structure
+- [nextjs-page](./nextjs-page): NextJS with page directory structure
