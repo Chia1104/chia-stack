@@ -10,7 +10,8 @@
     "lint": "next lint",
     "test": "vitest run",
     "test:watch": "vitest",
-    "type:check": "tsc --noEmit"
+    "type:check": "tsc --noEmit",
+    "clean": "git clean -xdf .turbo node_modules dist"
   },
   "dependencies": {
     "@chia-stack/react-ui": "workspace:*",

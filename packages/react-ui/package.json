@@ -7,7 +7,7 @@
   "scripts": {
     "build": "tsup && tailwindcss -i ./src/style/styles.css -o ./dist/styles.css",
     "dev": "concurrently \"tsup --watch\" \"tailwindcss -i ./src/style/styles.css -o ./dist/styles.css --watch\"",
-    "clean": "rm -rf dist",
+    "clean": "git clean -xdf .turbo node_modules dist",
     "lint": "eslint \"src/**/*.{ts,js,tsx,jsx}\" --fix",
     "type:check": "tsc --noEmit"
   },
