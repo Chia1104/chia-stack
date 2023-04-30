@@ -7,7 +7,7 @@
     },
     "web#build": {
       "dependsOn": ["^build"],
-      "outputs": [".next/**"],
+      "outputs": [".next/**", "!.next/cache/**"],
       "env": ["API_KEY"]
     },
     "lint": {
