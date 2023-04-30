@@ -71,10 +71,10 @@ importers:
 
   apps/web:
     dependencies:
-      '@chia-stack/react-ui':
+      '@chiastack/react-ui':
         specifier: workspace:*
         version: link:../../packages/react-ui
-      '@chia-stack/usehook':
+      '@chiastack/usehook':
         specifier: workspace:*
         version: link:../../packages/usehook
       '@next/bundle-analyzer':
@@ -99,9 +99,9 @@ importers:
         specifier: ^18.2.0
         version: 18.2.0(react@18.2.0)
     devDependencies:
-      '@chia-stack/tailwind-config':
+      '@chiastack/tailwind-config':
         specifier: workspace:*
-        version: link:../../shared/tailwind-config
+        version: link:../../packages/tailwind-config
       '@types/cors':
         specifier: ^2.8.13
         version: 2.8.13
@@ -132,10 +132,10 @@ importers:
 
   packages/react-ui:
     devDependencies:
-      '@chia-stack/tailwind-config':
+      '@chiastack/tailwind-config':
         specifier: workspace:*
-        version: link:../../shared/tailwind-config
-      '@chia-stack/usehook':
+        version: link:../tailwind-config
+      '@chiastack/usehook':
         specifier: workspace:*
         version: link:../usehook
       '@radix-ui/react-accessible-icon':
@@ -249,18 +249,27 @@ importers:
       tailwind-merge:
         specifier: ^1.11.0
         version: 1.11.0
+      tailwind-variants:
+        specifier: ^0.1.5
+        version: 0.1.5(tailwindcss@3.3.1)
       tailwindcss:
         specifier: ^3.3.1
         version: 3.3.1(postcss@8.4.23)
-      tailwindcss-animate:
-        specifier: ^1.0.5
-        version: 1.0.5(tailwindcss@3.3.1)
       tsconfig:
         specifier: workspace:0.0.0
         version: link:../../shared/tsconfig
       tsup:
         specifier: ^6.7.0
         version: 6.7.0(postcss@8.4.23)(typescript@5.0.4)
+
+  packages/tailwind-config:
+    devDependencies:
+      tailwindcss:
+        specifier: ^3.3.1
+        version: 3.3.1(postcss@8.4.23)
+      tailwindcss-animate:
+        specifier: ^1.0.5
+        version: 1.0.5(tailwindcss@3.3.1)
 
   packages/usehook:
     devDependencies:
@@ -288,15 +297,6 @@ importers:
       tsup:
         specifier: ^6.7.0
         version: 6.7.0(postcss@8.4.23)(typescript@5.0.4)
-
-  shared/tailwind-config:
-    devDependencies:
-      tailwindcss:
-        specifier: ^3.3.1
-        version: 3.3.1(postcss@8.4.23)
-      tailwindcss-animate:
-        specifier: ^1.0.5
-        version: 1.0.5(tailwindcss@3.3.1)
 
   shared/tsconfig: {}
 
@@ -5431,6 +5431,16 @@ packages:
 
   /tailwind-merge@1.11.0:
     resolution: {integrity: sha512-oG3/328Y7LrfPMfkgMNxoqEk1ZQdXBxdphf9FFrreo8q0EtVIHt3bQf2IyFhQuVt8puB57lCRBNbazGhYAyz9w==}
+    dev: true
+
+  /tailwind-variants@0.1.5(tailwindcss@3.3.1):
+    resolution: {integrity: sha512-/dQnADaHlt/3xSDcOYnTvTwvgDFpz+Nq++XNw3mCfIkBFoJhRJ4x3WG2ZQ9cWUqAFjVaRfdlG3KVYqs9bKlIhg==}
+    engines: {node: '>=16.x', pnpm: '>=7.x'}
+    peerDependencies:
+      tailwindcss: '*'
+    dependencies:
+      tailwind-merge: 1.11.0
+      tailwindcss: 3.3.1(postcss@8.4.23)
     dev: true
 
   /tailwindcss-animate@1.0.5(tailwindcss@3.3.1):

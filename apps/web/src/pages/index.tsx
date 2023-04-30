@@ -19,7 +19,7 @@ import {
   AccordionItem,
   AccordionTrigger,
   Modal,
-} from "@chia-stack/react-ui";
+} from "@chiastack/react-ui";
 import { z } from "zod";
 import { useRef, useState } from "react";
 import useDarkMode from "@/hooks/use-dark-mode";

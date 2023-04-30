@@ -9,13 +9,13 @@ const HeroButton: FC<
     <button
       disabled={disabled}
       className={cn(
-        "bg-ctw_secondary dark:bg-ctw_primary group relative inline-flex self-center rounded transition ease-in-out",
+        "bg-secondary dark:bg-ctw_primary group relative inline-flex self-center rounded transition ease-in-out",
         downClassName
       )}
       {...rest}>
       <span
         className={cn(
-          "bg-ctw_white/90 dark:bg-ctw_dark/90 text-ctw_dark dark:text-ctw_white transform p-3 text-base backdrop-blur-sm transition ease-in-out",
+          "dark:bg-dark/90 text-dark transform bg-white/90 p-3 text-base backdrop-blur-sm transition ease-in-out dark:text-white",
           disabled
             ? "cursor-not-allowed text-gray-400"
             : "group-hover:-translate-x-1 group-hover:-translate-y-1",

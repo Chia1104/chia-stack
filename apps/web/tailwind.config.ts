@@ -1,11 +1,11 @@
 import type { Config } from "tailwindcss";
-import basedConfig, { animation } from "@chia-stack/tailwind-config";
+import baseConfig, { animation } from "@chiastack/tailwind-config";
 
 export default {
-  presets: [animation, basedConfig],
+  presets: [animation, baseConfig],
   content: [
     `src/**/*.{js,ts,jsx,tsx}`,
-    `node_modules/@chia-stack/react-ui/**/*.{js,ts,jsx,tsx}`,
+    `node_modules/@chiastack/react-ui/**/*.{js,ts,jsx,tsx,mjs}`,
   ],
   theme: {
     extend: {

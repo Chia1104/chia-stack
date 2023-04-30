@@ -7,7 +7,7 @@ You can easily incorporate your own Tailwind config without any conflicts, and i
 ## Installation
 
 ```bash
-pnpm add @chia-stack/react-ui
+pnpm add @chiastack/react-ui @chiastack/tailwind-config
 ```
 
 ## Configuration
@@ -20,38 +20,38 @@ Make sure your tailwind version is at least 3.3.0.
 
 ```ts
 import type { Config } from "tailwindcss"
-import basedConfig, { animation } from "@shared/tailwind-config"
+import baseConfig, { animation } from "@chiastack/tailwind-config"
 
 export default {
   // other config
   content: [
     `src/**/*.{js,ts,jsx,tsx}`,
-    `node_modules/@chia-stack/react-ui/**/*.{js,ts,jsx,tsx}`,
+    `node_modules/@chiastack/react-ui/**/*.{js,ts,jsx,tsx}`,
   ],
-  presets: [animation, basedConfig],
+  presets: [animation, baseConfig],
 } satisfies Config
 ```
 
 ### JavaScript
 
 ```js
-const basedConfig = require("@shared/tailwind-config")
-const animation = require("@shared/tailwind-config")
+const baseConfig = require("@chiastack/tailwind-config")
+const { animation } = require("@chiastack/tailwind-config")
 
 module.exports = {
   // other config
   content: [
     `src/**/*.{js,ts,jsx,tsx}`,
-    `node_modules/@chia-stack/react-ui/**/*.{js,ts,jsx,tsx}`,
+    `node_modules/@chiastack/react-ui/**/*.{js,ts,jsx,tsx}`,
   ],
-  presets: [animation, basedConfig],
+  presets: [animation, baseConfig],
 }
 ```
 
 ## Usage
 
 ```tsx
-import { Button } from "@chia-stack/react-ui"
+import { Button } from "@chiastack/react-ui"
 
 export default function App() {
   return <Button className="bg-gray-300">Click me!</Button>

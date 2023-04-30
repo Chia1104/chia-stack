@@ -1,7 +1,7 @@
 import React, { type FC } from "react";
 import { AnimatePresence, motion, MotionProps } from "framer-motion";
 import { createPortal } from "react-dom";
-import { usePortal, useLockedBody } from "@chia-stack/usehook";
+import { usePortal, useLockedBody } from "@chiastack/usehook";
 import { cn } from "../utils";
 
 interface ModalProps extends MotionProps {

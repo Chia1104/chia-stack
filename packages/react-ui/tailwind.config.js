@@ -1,5 +1,5 @@
-const config = require("@chia-stack/tailwind-config");
-const { animation } = require("@chia-stack/tailwind-config");
+const config = require("@chiastack/tailwind-config");
+const { animation } = require("@chiastack/tailwind-config");
 const { fontFamily } = require("tailwindcss/defaultTheme");
 
 /** @type {import('tailwindcss').Config} */

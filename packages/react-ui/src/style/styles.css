@@ -3,29 +3,7 @@
 @tailwind utilities;
 
 @layer components {
-  .ctw-component-bg-primary {
-    @apply bg-ctw_light dark:bg-ctw_dark text-ctw_dark dark:text-ctw_white transition ease-in-out
-  }
-
-  .ctw-component-bg-secondary {
-    @apply bg-ctw_white/90 dark:bg-ctw_dark/90 text-ctw_dark dark:text-ctw_white transition ease-in-out backdrop-blur-sm
-  }
-
-  .ctw-component-button-primary {
-    @apply
-    bg-ctw_primary rounded-full drop-shadow-lg text-ctw_white hover:bg-ctw_secondary transition ease-in-out flex justify-center items-center px-3 py-1
-  }
-
-  .ctw-component-button-secondary {
-    @apply
-    ctw-component-bg-secondary backdrop-blur-md transition ease-in-out rounded px-5 py-3 text-2xl
-  }
-
-  .ctw-component-modal {
-    @apply bg-[#00000040] dark:bg-[#000000b5] fixed w-full h-full flex justify-center items-center z-[999] top-0
-  }
-
-  .ctw-component-border-primary {
-    @apply border dark:border-ctw_primary border-ctw_secondary
+  .ctw-container {
+    @apply container mx-auto;
   }
 }
