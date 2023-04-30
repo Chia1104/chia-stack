@@ -1,4 +1,8 @@
-FROM node:18-alpine AS deps
+ARG NODE_TAG=18-alpine
+
+FROM node:${NODE_TAG} AS base
+
+FROM base AS deps
 
 WORKDIR /app
 
@@ -8,25 +12,23 @@ RUN apk add --no-cache libc6-compat && \
     yarn global add pnpm && \
     pnpm i
 
-FROM node:18-alpine AS builder
+FROM base AS builder
 
 WORKDIR /app
 
 COPY --from=deps /app/node_modules ./node_modules
 COPY . .
 
-ARG \
-    DATABASE_URL \
+ARG DATABASE_URL \
     BASE_URL
-ENV \
-    DATABASE_URL=${DATABASE_URL} \
+ENV DATABASE_URL=${DATABASE_URL} \
     BASE_URL=${BASE_URL} \
     SKIP_ENV_VALIDATION=true
 
 RUN yarn prisma generate && \
     yarn build
 
-FROM node:18-alpine AS runner
+FROM base AS runner
 
 WORKDIR /app
 
@@ -42,15 +44,13 @@ COPY --from=builder /app/next.config.mjs ./next.config.mjs
 COPY --from=builder --chown=nextjs:nodejs /app/.next/standalone ./
 COPY --from=builder --chown=nextjs:nodejs /app/.next/static ./.next/static
 
-ARG \
-    DATABASE_URL \
+ARG DATABASE_URL \
     NEXTAUTH_URL \
     NEXTAUTH_SECRET \
     GOOGLE_CLIENT_ID \
     GOOGLE_CLIENT_SECRET \
     BASE_URL
-ENV \
-    DATABASE_URL=${DATABASE_URL} \
+ENV DATABASE_URL=${DATABASE_URL} \
     NEXTAUTH_URL=${NEXTAUTH_URL} \
     NEXTAUTH_SECRET=${NEXTAUTH_SECRET} \
     GOOGLE_CLIENT_ID=${GOOGLE_CLIENT_ID} \
