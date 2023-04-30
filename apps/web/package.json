@@ -22,13 +22,11 @@
     "next": "13.2.4",
     "next-themes": "^0.2.1",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "zod": "^3.21.4"
+    "react-dom": "^18.2.0"
   },
   "devDependencies": {
     "@chia-stack/tailwind-config": "workspace:*",
     "@types/cors": "^2.8.13",
-    "@types/node": "^18.15.11",
     "@types/react": "^18.0.32",
     "@types/react-dom": "^18.0.11",
     "@vitejs/plugin-react": "^3.1.0",

@@ -3,6 +3,7 @@
   "name": "@chia-stack/react-ui",
   "version": "0.0.1-beta.1",
   "private": true,
+  "main": "./dist/index.mjs",
   "types": "./dist/index.d.ts",
   "scripts": {
     "build": "tsup && tailwindcss -i ./src/style/styles.css -o ./dist/styles.css",
@@ -10,13 +11,6 @@
     "clean": "git clean -xdf .turbo node_modules dist",
     "lint": "eslint \"src/**/*.{ts,js,tsx,jsx}\" --fix",
     "type:check": "tsc --noEmit"
-  },
-  "exports": {
-    ".": {
-      "require": "./dist/index.js",
-      "import": "./dist/index.mjs"
-    },
-    "./styles.css": "./dist/styles.css"
   },
   "devDependencies": {
     "@chia-stack/tailwind-config": "workspace:*",
@@ -61,14 +55,126 @@
     "tailwindcss": "^3.3.1",
     "tailwindcss-animate": "^1.0.5",
     "tsconfig": "workspace:0.0.0",
-    "tsup": "^6.7.0",
-    "zod": "^3.21.4"
+    "tsup": "^6.7.0"
   },
   "peerDependencies": {
-    "react": ">=18",
-    "react-dom": ">=18"
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "tailwindcss": "^3.3.0"
   },
   "engines": {
     "node": ">=16"
+  },
+  "exports": {
+    "./package.json": "./package.json",
+    "./src/style/styles.css": "./dist/index.css",
+    ".": {
+      "import": "./dist/index.mjs",
+      "types": "./dist/index.d.ts"
+    },
+    "./accordion/accordion": {
+      "import": "./dist/accordion/accordion.mjs",
+      "types": "./dist/accordion/accordion.d.ts"
+    },
+    "./aspect-ratio/aspect-ratio": {
+      "import": "./dist/aspect-ratio/aspect-ratio.mjs",
+      "types": "./dist/aspect-ratio/aspect-ratio.d.ts"
+    },
+    "./avatar/avatar": {
+      "import": "./dist/avatar/avatar.mjs",
+      "types": "./dist/avatar/avatar.d.ts"
+    },
+    "./button/button": {
+      "import": "./dist/button/button.mjs",
+      "types": "./dist/button/button.d.ts"
+    },
+    "./fade-in/fade-in": {
+      "import": "./dist/fade-in/fade-in.mjs",
+      "types": "./dist/fade-in/fade-in.d.ts"
+    },
+    "./hero-button/hero-button": {
+      "import": "./dist/hero-button/hero-button.mjs",
+      "types": "./dist/hero-button/hero-button.d.ts"
+    },
+    "./hover-card/hover-card": {
+      "import": "./dist/hover-card/hover-card.mjs",
+      "types": "./dist/hover-card/hover-card.d.ts"
+    },
+    "./input/input": {
+      "import": "./dist/input/input.mjs",
+      "types": "./dist/input/input.d.ts"
+    },
+    "./modal/modal": {
+      "import": "./dist/modal/modal.mjs",
+      "types": "./dist/modal/modal.d.ts"
+    },
+    "./textarea/textarea": {
+      "import": "./dist/textarea/textarea.mjs",
+      "types": "./dist/textarea/textarea.d.ts"
+    }
+  },
+  "typesVersions": {
+    "*": {
+      "avatar": [
+        "dist/avatar.d.ts"
+      ],
+      "input": [
+        "dist/input.d.ts"
+      ],
+      "hover-card": [
+        "dist/hover-card.d.ts"
+      ],
+      "button": [
+        "dist/button.d.ts"
+      ],
+      "fade-in": [
+        "dist/fade-in.d.ts"
+      ],
+      "hero-button": [
+        "dist/hero-button.d.ts"
+      ],
+      "modal": [
+        "dist/modal.d.ts"
+      ],
+      "textarea": [
+        "dist/textarea.d.ts"
+      ],
+      "accordion": [
+        "dist/accordion.d.ts"
+      ],
+      "aspect-ratio": [
+        "dist/aspect-ratio.d.ts"
+      ],
+      "accordion/accordion": [
+        "dist/accordion/accordion.d.ts"
+      ],
+      "aspect-ratio/aspect-ratio": [
+        "dist/aspect-ratio/aspect-ratio.d.ts"
+      ],
+      "avatar/avatar": [
+        "dist/avatar/avatar.d.ts"
+      ],
+      "button/button": [
+        "dist/button/button.d.ts"
+      ],
+      "fade-in/fade-in": [
+        "dist/fade-in/fade-in.d.ts"
+      ],
+      "hero-button/hero-button": [
+        "dist/hero-button/hero-button.d.ts"
+      ],
+      "hover-card/hover-card": [
+        "dist/hover-card/hover-card.d.ts"
+      ],
+      "input/input": [
+        "dist/input/input.d.ts"
+      ],
+      "modal/modal": [
+        "dist/modal/modal.d.ts"
+      ],
+      "textarea/textarea": [
+        "dist/textarea/textarea.d.ts"
+      ]
+    }
   }
 }
