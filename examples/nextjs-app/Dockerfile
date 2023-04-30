@@ -1,4 +1,8 @@
-FROM node:18-alpine AS deps
+ARG NODE_TAG=18-alpine
+
+FROM node:${NODE_TAG} AS base
+
+FROM base AS deps
 
 WORKDIR /app
 COPY package.json pnpm-lock.yaml ./
@@ -7,7 +11,7 @@ RUN apk add --no-cache libc6-compat &&  \
     yarn global add pnpm && \
     pnpm i
 
-FROM node:18-alpine AS builder
+FROM base AS builder
 
 WORKDIR /app
 COPY --from=deps /app/node_modules ./node_modules
@@ -19,7 +23,7 @@ ENV BUILD_ENV=${BUILD_ENV}
 
 RUN yarn build
 
-FROM node:18-alpine AS runner
+FROM base AS runner
 
 WORKDIR /app
 
