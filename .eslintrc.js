@@ -29,7 +29,7 @@ module.exports = {
     },
     // Rules for React files
     {
-      files: "{packages,app}/**",
+      files: "**/*.{jsx,tsx}",
       extends: [
         "plugin:react/recommended",
         "plugin:react/jsx-runtime",
@@ -39,7 +39,7 @@ module.exports = {
       plugins: ["react"],
       rules: {
         "react/prop-types": "off",
-        "react/no-unknown-property": ["error", { ignore: ["jsx"] }],
+        "react/no-unknown-property": "off",
         "react-hooks/exhaustive-deps": "warn",
         "react/self-closing-comp": "error",
         "no-restricted-syntax": [
@@ -76,11 +76,7 @@ module.exports = {
     {
       files: "**/*.{ts,tsx,cts,mts}",
       parserOptions: {
-        project: [
-          "packages/*/tsconfig.json",
-          "apps/*/tsconfig.json",
-          "tsconfig.eslint.json",
-        ],
+        project: ["packages/*/tsconfig.json", "apps/*/tsconfig.json"],
       },
       rules: {
         "@typescript-eslint/ban-ts-comment": "off",
@@ -89,19 +85,9 @@ module.exports = {
         "@typescript-eslint/no-var-requires": "warn",
       },
     },
-    // Rules for `react-ui` package
     {
       ...TAILWIND_CONFIG,
-      files: "packages/react-ui/**",
-      plugins: [],
-      rules: {
-        ...TAILWIND_CONFIG.rules,
-      },
-    },
-    // Rules for `web` app
-    {
-      ...TAILWIND_CONFIG,
-      files: "apps/web/**",
+      files: "packages/ui/**",
       plugins: [],
       rules: {
         ...TAILWIND_CONFIG.rules,

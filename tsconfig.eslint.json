@@ -3,8 +3,11 @@
   // extend your base config to share compilerOptions, etc
   "compilerOptions": {
     // ensure that nobody can accidentally use this config for a build
-    "noEmit": true
+    "noEmit": true,
+    "strict": true,
   },
-  "include": ["**/tsup.config.ts", "shared/tailwind-config/index.d.ts"],
+  "include": ["**/tsup.config.ts",
+    "shared/tailwind-config/index.d.ts"
+  ],
   "exclude": []
 }

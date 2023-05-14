@@ -1,0 +1,41 @@
+{
+  "$schema": "https://json.schemastore.org/package",
+  "name": "@chiastack/utils",
+  "version": "0.0.1-beta.1",
+  "private": true,
+  "types": "./dist/index.d.ts",
+  "scripts": {
+    "build": "tsup",
+    "dev": "tsup --watch",
+    "clean": "git clean -xdf .turbo node_modules dist",
+    "lint": "eslint \"src/**/*.{ts,js,tsx,jsx}\" --fix",
+    "type:check": "tsc --noEmit",
+    "test": "vitest run",
+    "test:watch": "vitest"
+  },
+  "exports": {
+    ".": {
+      "require": "./dist/index.js",
+      "import": "./dist/index.mjs"
+    }
+  },
+  "devDependencies": {
+    "@chiastack/tsconfig": "workspace:*",
+    "@testing-library/react": "^14.0.0",
+    "@types/react": "^18.0.30",
+    "@types/react-dom": "^18.0.11",
+    "@vitejs/plugin-react": "^3.1.0",
+    "clsx": "^1.2.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "tailwind-merge": "^1.11.0",
+    "tsup": "^6.7.0"
+  },
+  "peerDependencies": {
+    "react": ">=18",
+    "react-dom": ">=18"
+  },
+  "engines": {
+    "node": ">=16"
+  }
+}
