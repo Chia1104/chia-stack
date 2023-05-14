@@ -12,7 +12,8 @@
   },
   "workspaces": [
     "apps/*",
-    "packages/*"
+    "packages/*",
+    "playground/*"
   ],
   "scripts": {
     "prepare": "husky install",

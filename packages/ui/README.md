@@ -7,7 +7,7 @@ You can easily incorporate your own Tailwind config without any conflicts, and i
 ## Installation
 
 ```bash
-pnpm add @chiastack/react-ui @chiastack/tailwind-config
+pnpm add @chiastack/ui @chiastack/tailwind-config
 ```
 
 ## Configuration
@@ -26,7 +26,7 @@ export default {
   // other config
   content: [
     `src/**/*.{js,ts,jsx,tsx}`,
-    `node_modules/@chiastack/react-ui/**/*.{js,ts,jsx,tsx}`,
+    `node_modules/@chiastack/ui/**/*.{js,ts,jsx,tsx}`,
   ],
   presets: [animation, baseConfig],
 } satisfies Config
@@ -42,7 +42,7 @@ module.exports = {
   // other config
   content: [
     `src/**/*.{js,ts,jsx,tsx}`,
-    `node_modules/@chiastack/react-ui/**/*.{js,ts,jsx,tsx}`,
+    `node_modules/@chiastack/ui/**/*.{js,ts,jsx,tsx}`,
   ],
   presets: [animation, baseConfig],
 }

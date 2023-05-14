@@ -76,7 +76,11 @@ module.exports = {
     {
       files: "**/*.{ts,tsx,cts,mts}",
       parserOptions: {
-        project: ["packages/*/tsconfig.json", "apps/*/tsconfig.json"],
+        project: [
+          "packages/*/tsconfig.json",
+          "apps/*/tsconfig.json",
+          "playground/*/tsconfig.json",
+        ],
       },
       rules: {
         "@typescript-eslint/ban-ts-comment": "off",
@@ -88,6 +92,14 @@ module.exports = {
     {
       ...TAILWIND_CONFIG,
       files: "packages/ui/**",
+      plugins: [],
+      rules: {
+        ...TAILWIND_CONFIG.rules,
+      },
+    },
+    {
+      ...TAILWIND_CONFIG,
+      files: "playground/ui/**",
       plugins: [],
       rules: {
         ...TAILWIND_CONFIG.rules,
