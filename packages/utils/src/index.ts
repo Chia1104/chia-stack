@@ -6,3 +6,4 @@ export * from "./use-infinite-scroll";
 export { default as useIsomorphicLayoutEffect } from "./use-isomorphic-layout-effect";
 export { default as useLockedBody } from "./use-locked-body";
 export * from "./cn";
+export { default as useProxyState } from "./use-proxy-state";
