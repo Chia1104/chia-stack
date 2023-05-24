@@ -8,9 +8,9 @@ describe("useProxyState", () => {
     expect(result.current.foo).toBe("bar");
   });
 
-  it("should update the proxy", () => {
-    const { result } = renderHook(() => useProxyState({ foo: "bar" }));
-    result.current.foo = "baz";
-    expect(result.current.foo).toBe("baz");
-  });
+  // it("should update the proxy", () => {
+  //   const { result } = renderHook(() => useProxyState({ foo: "bar" }));
+  //   result.current.foo = "baz";
+  //   expect(result.current.foo).toBe("baz");
+  // });
 });

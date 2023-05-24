@@ -1,11 +1,19 @@
 import { useState } from "react";
 import reactLogo from "./assets/react.svg";
 import "./App.css";
-import { cn } from "@chiastack/utils";
+import { cn, useProxyState, useDeepClone } from "@chiastack/utils";
 import { Button } from "@chiastack/ui";
 
 function App() {
   const [count, setCount] = useState(0);
+  const [objCount, setObjCount] = useState<{ count: number }>({ count: 0 }); // [1
+  const proxyCount = useProxyState<{ count: number }>({ count: 0 });
+  const [sameDeepCount, setSameDeepCount] = useDeepClone<{ count: number }>({
+    count: 0,
+  });
+  const [diffDeepCount, setDiffDeepCount] = useDeepClone<{ count: number }>({
+    count: 0,
+  });
 
   return (
     <div className={cn("App flex flex-col items-center justify-center gap-5")}>
@@ -23,6 +31,26 @@ function App() {
           className="border-info bg-primary border"
           onClick={() => setCount((count) => count + 1)}>
           count is {count}
+        </Button>
+        <Button
+          className="border-info bg-primary border"
+          onClick={() => proxyCount.count++}>
+          proxyCount is {proxyCount.count}
+        </Button>
+        <Button
+          className="border-info bg-primary border"
+          onClick={() => setSameDeepCount({ count: 0 })}>
+          sameDeepCount is {sameDeepCount.count}, this one will not re-render
+        </Button>
+        <Button
+          className="border-info bg-primary border"
+          onClick={() => setDiffDeepCount({ count: 1 })}>
+          diffDeepCount is {diffDeepCount.count}
+        </Button>
+        <Button
+          className="border-info bg-primary border"
+          onClick={() => setObjCount({ count: 0 })}>
+          objCount is {objCount.count}
         </Button>
         <p>
           Edit <code>src/App.tsx</code> and save to test HMR

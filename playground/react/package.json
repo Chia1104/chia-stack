@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
-    "preview": "vite preview",
+    "start": "vite preview",
     "test": "vitest run",
     "test:watch": "vitest",
     "format": "prettier --write \"**/*.{ts,tsx,js,jsx,mjs,cjs}\"",
@@ -17,6 +17,7 @@
   "dependencies": {
     "@chiastack/ui": "workspace:*",
     "@chiastack/utils": "workspace:*",
+    "lodash": "^4.17.21",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
@@ -26,6 +27,7 @@
     "@testing-library/react": "^14.0.0",
     "@types/react": "^18.2.7",
     "@types/react-dom": "^18.2.4",
+    "@types/lodash": "^4.14.194",
     "@vitejs/plugin-react-swc": "^3.3.1",
     "autoprefixer": "^10.4.14",
     "postcss": "^8.4.23",
