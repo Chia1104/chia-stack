@@ -8,7 +8,7 @@ WORKDIR /app
 COPY package.json pnpm-lock.yaml ./
 
 RUN apk add --no-cache libc6-compat &&  \
-    yarn global add pnpm && \
+    corepack enable && \
     pnpm i
 
 FROM base AS builder
@@ -17,11 +17,13 @@ WORKDIR /app
 COPY --from=deps /app/node_modules ./node_modules
 COPY . .
 
-ARG BUILD_ENV
+ARG VERCEL_URL
 
-ENV BUILD_ENV=${BUILD_ENV}
+ENV VERCEL_URL=${VERCEL_URL}
 
-RUN yarn build
+RUN apk add --no-cache libc6-compat &&  \
+    corepack enable && \
+    pnpm build
 
 FROM base AS runner
 
@@ -41,9 +43,9 @@ COPY --from=builder --chown=nextjs:nodejs /app/.next/static ./.next/static
 
 USER nextjs
 
-ARG RUNTIME_ENV
+ARG VERCEL_URL
 
-ENV RUNTIME_ENV=${RUNTIME_ENV} \
+ENV VERCEL_URL=${VERCEL_URL} \
     PORT=8080 \
     NODE_ENV=production
 
