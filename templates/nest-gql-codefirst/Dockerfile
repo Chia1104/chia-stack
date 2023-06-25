@@ -27,15 +27,15 @@ FROM base as runner
 WORKDIR /app
 
 COPY --from=installer /app/dist/ .
-COPY --from=installer /app/node_modules ./node_modules
 
-#COPY package.json pnpm-lock.yaml ./
-#
-#RUN apk update && \
-#    apk add --no-cache \
-#    libc6-compat && \
-#    corepack enable && \
-#    pnpm i --prod --ignore-scripts
+COPY package.json pnpm-lock.yaml prisma ./
+
+RUN apk update && \
+    apk add --no-cache \
+    libc6-compat && \
+    corepack enable && \
+    pnpm i --prod --ignore-scripts && \
+    pnpm prisma generate
 
 ARG DATABASE_URL
 
