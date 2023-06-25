@@ -17,9 +17,13 @@ WORKDIR /app
 COPY --from=deps /app/node_modules ./node_modules
 COPY . .
 
-ARG VERCEL_URL
+ARG TURBO_TEAM \
+    TURBO_TOKEN \
+    VERCEL_URL
 
-ENV VERCEL_URL=${VERCEL_URL}
+ENV TURBO_TEAM=${TURBO_TEAM} \
+    TURBO_TOKEN=${TURBO_TOKEN} \
+    VERCEL_URL=${VERCEL_URL}
 
 RUN apk add --no-cache libc6-compat &&  \
     corepack enable && \
