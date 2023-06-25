@@ -1,36 +1,45 @@
-FROM node:18-alpine AS install
+ARG NODE_VERSION=18
+
+FROM node:${NODE_VERSION}-alpine AS base
+
+FROM base AS installer
+
 WORKDIR /app
-
-COPY package.json pnpm-lock.yaml ./
-
-RUN apk add --no-cache libc6-compat && \
-    yarn global add pnpm && \
-    pnpm install
-
-FROM node:18-alpine AS build
-WORKDIR /app
-
-COPY --from=install /app/node_modules ./node_modules
 COPY . .
 
-RUN yarn prisma generate && \
-    yarn build
+ARG TURBO_TEAM \
+    TURBO_TOKEN \
+    DATABASE_URL
 
-FROM node:18-alpine AS runner
+ENV TURBO_TEAM=$TURBO_TEAM \
+    TURBO_TOKEN=$TURBO_TOKEN \
+    DATABASE_URL=${DATABASE_URL}
 
+RUN apk update && \
+    apk add --no-cache \
+    libc6-compat && \
+    corepack enable && \
+    pnpm i && \
+    pnpm prisma generate && \
+    pnpm build
+
+FROM base as runner
 WORKDIR /app
 
-COPY --from=build /app/node_modules ./node_modules
-COPY --from=build /app/dist ./dist
-COPY schema.gql ./schema.gql
+COPY --from=installer /app/dist .
+
+RUN apk update && \
+    apk add --no-cache \
+    libc6-compat && \
+    corepack enable && \
+    pnpm i --prod
 
 ARG DATABASE_URL
 
 ENV NODE_ENV=production \
-    HOST=0.0.0.0 \
     PORT=8080 \
     DATABASE_URL=${DATABASE_URL}
 
 EXPOSE 8080
 
-CMD ["node", "dist/main.js"]
+CMD [ "node", "apps/main.js" ]

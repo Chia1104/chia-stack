@@ -2,23 +2,25 @@
 // learn more about it in the docs: https://pris.ly/d/prisma-schema
 
 generator client {
-  provider        = "prisma-client-js"
-  previewFeatures = ["referentialIntegrity"]
+  provider = "prisma-client-js"
 }
 
 datasource db {
-  provider             = "postgresql"
-  url                  = env("DATABASE_URL")
-  shadowDatabaseUrl    = env("SHADOW_DATABASE_URL")
-  referentialIntegrity = "prisma"
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
 }
 
-model Product {
-  id          String  @id @default(cuid())
-  name        String
-  description String
+model Post {
+  id          String   @id @default(cuid())
+  slug        String   @unique
+  title       String
   excerpt     String
-  price       Int
+  tags        String[]
+  headImg     String?
   createdAt   DateTime @default(now())
-  updatedAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+  readTime    Int?
+  readingMins String?
+  published   Boolean  @default(false)
+  content     String
 }

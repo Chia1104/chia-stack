@@ -1,23 +1,23 @@
 import { Module } from "@nestjs/common";
-import { GraphQLModule } from "@nestjs/graphql";
-import { ApolloDriver, type ApolloDriverConfig } from "@nestjs/apollo";
 import { ConfigModule } from "@nestjs/config";
-import { join } from "path";
-import { ProductsModule } from "@/modules";
 import { AppController } from "./app.controller";
+import PostModule from "@/modules/post/post.module";
+import { GraphQLModule } from "@nestjs/graphql";
+import type { ApolloDriverConfig } from "@nestjs/apollo";
+import { ApolloDriver } from "@nestjs/apollo";
+import { join } from "path";
 
 @Module({
   imports: [
-    ProductsModule,
+    PostModule,
     ConfigModule.forRoot(),
     GraphQLModule.forRoot<ApolloDriverConfig>({
       driver: ApolloDriver,
-      autoSchemaFile: join(process.cwd(), "schema.gql"),
-      buildSchemaOptions: { dateScalarMode: "timestamp" },
-      debug: process.env.NODE_ENV !== "production",
-      playground: true,
-      introspection: process.env.NODE_ENV !== "production",
-      persistedQueries: false,
+      autoSchemaFile: join(process.cwd(), "src/schema.gql"),
+      sortSchema: true,
+      subscriptions: {
+        "graphql-ws": true,
+      },
     }),
   ],
   controllers: [AppController],

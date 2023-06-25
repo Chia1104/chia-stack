@@ -8,8 +8,6 @@
     "allowSyntheticDefaultImports": true,
     "target": "es2017",
     "sourceMap": true,
-    "outDir": "./dist",
-    "baseUrl": "./",
     "incremental": true,
     "skipLibCheck": true,
     "strictNullChecks": false,
@@ -17,11 +15,13 @@
     "strictBindCallApply": false,
     "forceConsistentCasingInFileNames": false,
     "noFallthroughCasesInSwitch": false,
+    "outDir": "./dist",
     "baseUrl": ".",
     "paths": {
       "@/*": [
         "src/*"
       ]
-    }
-  }
+    },
+  },
+  "include": ["src/**/*.ts", "vitest.config.ts", "scripts/**/*.ts"],
 }
