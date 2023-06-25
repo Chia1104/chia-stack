@@ -26,13 +26,16 @@ RUN apk update && \
 FROM base as runner
 WORKDIR /app
 
-COPY --from=installer /app/dist .
+COPY --from=installer /app/dist/ .
+COPY --from=installer /app/node_modules ./node_modules
 
-RUN apk update && \
-    apk add --no-cache \
-    libc6-compat && \
-    corepack enable && \
-    pnpm i --prod
+#COPY package.json pnpm-lock.yaml ./
+#
+#RUN apk update && \
+#    apk add --no-cache \
+#    libc6-compat && \
+#    corepack enable && \
+#    pnpm i --prod --ignore-scripts
 
 ARG DATABASE_URL
 
@@ -42,4 +45,4 @@ ENV NODE_ENV=production \
 
 EXPOSE 8080
 
-CMD [ "node", "apps/main.js" ]
+CMD [ "node", "main.js" ]
