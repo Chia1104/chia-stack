@@ -64,7 +64,7 @@ export default defineConfig((opts) => {
         await writeFile("./package.json", JSON.stringify(pkgJson, null, 2));
       },
     },
-  ];
+  ] satisfies Options[];
 });
 
 type PackageJson = {

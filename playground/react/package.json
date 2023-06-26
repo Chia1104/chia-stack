@@ -17,7 +17,7 @@
   "dependencies": {
     "@chiastack/ui": "workspace:*",
     "@chiastack/utils": "workspace:*",
-    "framer-motion": "^10.12.16",
+    "framer-motion": "^10.12.17",
     "lodash": "^4.17.21",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
@@ -26,13 +26,13 @@
     "@chiastack/tailwind-config": "workspace:*",
     "@chiastack/tsconfig": "workspace:*",
     "@testing-library/react": "^14.0.0",
-    "@types/lodash": "^4.14.194",
-    "@types/react": "^18.2.7",
-    "@types/react-dom": "^18.2.4",
-    "@vitejs/plugin-react-swc": "^3.3.1",
+    "@types/lodash": "^4.14.195",
+    "@types/react": "^18.2.14",
+    "@types/react-dom": "^18.2.6",
+    "@vitejs/plugin-react-swc": "^3.3.2",
     "autoprefixer": "^10.4.14",
-    "postcss": "^8.4.23",
+    "postcss": "^8.4.24",
     "tailwindcss": "^3.3.2",
-    "vite": "^4.3.8"
+    "vite": "^4.3.9"
   }
 }

@@ -12,7 +12,6 @@ const baseVariants = tv({
   base: "inline-flex items-center justify-center rounded-md text-sm font-medium transition-colors focus:outline-none disabled:opacity-50 disabled:cursor-not-allowed",
 });
 
-// @ts-ignore wip
 const newVariants = tv({
   extend: baseVariants,
   variants: {

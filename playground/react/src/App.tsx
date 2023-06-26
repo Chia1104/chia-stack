@@ -2,7 +2,7 @@ import { useState } from "react";
 import reactLogo from "./assets/react.svg";
 import "./App.css";
 import { cn, useProxyState, useDeepClone } from "@chiastack/utils";
-import { Button } from "@chiastack/ui";
+import { Button, Input } from "@chiastack/ui";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -25,6 +25,7 @@ function App() {
           <img src={reactLogo} className="logo react" alt="React logo" />
         </a>
       </div>
+      <Input autoComplete="off" placeholder="Type something..." />
       <h1>Vite + React + TS + TailwindCSS</h1>
       <div className={cn("card flex flex-col gap-3")}>
         <Button
