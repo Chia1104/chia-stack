@@ -1,6 +1,6 @@
 {
   "$schema": "https://json.schemastore.org/package",
-  "name": "@chiastack/utils",
+  "name": "@chiastack/ui-utils",
   "version": "0.0.1-beta.1",
   "private": true,
   "types": "./dist/index.d.ts",
@@ -21,7 +21,22 @@
   },
   "devDependencies": {
     "@chiastack/tsconfig": "workspace:*",
+    "@testing-library/react": "^14.0.0",
+    "@types/lodash": "^4.14.195",
+    "@types/react": "^18.2.13",
+    "@types/react-dom": "^18.2.6",
+    "@vitejs/plugin-react": "^4.0.1",
+    "clsx": "^1.2.1",
+    "lodash": "^4.17.21",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "tailwind-merge": "^1.13.2",
     "tsup": "^7.0.0"
+  },
+  "peerDependencies": {
+    "lodash": ">=4.17.21",
+    "react": ">=18",
+    "react-dom": ">=18"
   },
   "engines": {
     "node": ">=16"

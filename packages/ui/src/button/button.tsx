@@ -1,5 +1,5 @@
 import React, { type ButtonHTMLAttributes, forwardRef } from "react";
-import { cn } from "@chiastack/utils";
+import { cn } from "@chiastack/ui-utils";
 import { type VariantProps, cva } from "class-variance-authority";
 import { motion, type MotionProps } from "framer-motion";
 import { tv, type VariantProps as TVariantProps } from "tailwind-variants";

@@ -101,6 +101,9 @@ importers:
       '@chiastack/tsconfig':
         specifier: workspace:*
         version: link:../tsconfig
+      '@chiastack/ui-utils':
+        specifier: workspace:*
+        version: link:../ui-utils
       '@chiastack/utils':
         specifier: workspace:*
         version: link:../utils
@@ -225,7 +228,7 @@ importers:
         specifier: ^7.0.0
         version: 7.0.0(postcss@8.4.24)(ts-node@10.9.1)(typescript@5.1.3)
 
-  packages/utils:
+  packages/ui-utils:
     devDependencies:
       '@chiastack/tsconfig':
         specifier: workspace:*
@@ -238,7 +241,7 @@ importers:
         version: 4.14.195
       '@types/react':
         specifier: ^18.2.13
-        version: 18.2.13
+        version: 18.2.14
       '@types/react-dom':
         specifier: ^18.2.6
         version: 18.2.6
@@ -262,16 +265,25 @@ importers:
         version: 1.13.2
       tsup:
         specifier: ^7.0.0
-        version: 7.0.0(postcss@8.4.24)(ts-node@10.9.1)(typescript@5.1.3)
+        version: 7.0.0(ts-node@10.9.1)(typescript@5.1.3)
+
+  packages/utils:
+    devDependencies:
+      '@chiastack/tsconfig':
+        specifier: workspace:*
+        version: link:../tsconfig
+      tsup:
+        specifier: ^7.0.0
+        version: 7.0.0(ts-node@10.9.1)(typescript@5.1.3)
 
   playground/react:
     dependencies:
       '@chiastack/ui':
         specifier: workspace:*
         version: link:../../packages/ui
-      '@chiastack/utils':
+      '@chiastack/ui-utils':
         specifier: workspace:*
-        version: link:../../packages/utils
+        version: link:../../packages/ui-utils
       framer-motion:
         specifier: ^10.12.17
         version: 10.12.17(react-dom@18.2.0)(react@18.2.0)
@@ -5208,6 +5220,23 @@ packages:
       yaml: 2.3.0
     dev: true
 
+  /postcss-load-config@4.0.1(ts-node@10.9.1):
+    resolution: {integrity: sha512-vEJIc8RdiBRu3oRAI0ymerOn+7rPuMvRXslTvZUKZonDHFIczxztIyJ1urxM1x9JXEikvpWWTUUqal5j/8QgvA==}
+    engines: {node: '>= 14'}
+    peerDependencies:
+      postcss: '>=8.0.9'
+      ts-node: '>=9.0.0'
+    peerDependenciesMeta:
+      postcss:
+        optional: true
+      ts-node:
+        optional: true
+    dependencies:
+      lilconfig: 2.1.0
+      ts-node: 10.9.1(@types/node@20.3.1)(typescript@5.1.3)
+      yaml: 2.3.1
+    dev: true
+
   /postcss-nested@6.0.1(postcss@8.4.24):
     resolution: {integrity: sha512-mEp4xPMi5bSWiMbsgoPfcP74lsWLHkQbZc3sY+jWYd65CUwXrUaTp0fmNpa01ZcETKlIgUdFN/MpS2xZtqL9dQ==}
     engines: {node: '>=12.0'}
@@ -5503,14 +5532,6 @@ packages:
     hasBin: true
     dependencies:
       glob: 7.2.3
-    dev: true
-
-  /rollup@3.25.1:
-    resolution: {integrity: sha512-tywOR+rwIt5m2ZAWSe5AIJcTat8vGlnPFAv15ycCrw33t6iFsXZ6mzHVFh2psSjxQPmI+xgzMZZizUAukBI4aQ==}
-    engines: {node: '>=14.18.0', npm: '>=8.0.0'}
-    hasBin: true
-    optionalDependencies:
-      fsevents: 2.3.2
     dev: true
 
   /rollup@3.25.2:
@@ -6034,7 +6055,43 @@ packages:
       postcss: 8.4.24
       postcss-load-config: 4.0.1(postcss@8.4.24)(ts-node@10.9.1)
       resolve-from: 5.0.0
-      rollup: 3.25.1
+      rollup: 3.25.2
+      source-map: 0.8.0-beta.0
+      sucrase: 3.32.0
+      tree-kill: 1.2.2
+      typescript: 5.1.3
+    transitivePeerDependencies:
+      - supports-color
+      - ts-node
+    dev: true
+
+  /tsup@7.0.0(ts-node@10.9.1)(typescript@5.1.3):
+    resolution: {integrity: sha512-yYARDRkPq07mO3YUXTvF12ISwWQG57Odve8aFEgLdHyeGungxuKxb19yf9G0W8y59SZFkLnRj1gkoVk1gd5fbQ==}
+    engines: {node: '>=16.14'}
+    hasBin: true
+    peerDependencies:
+      '@swc/core': ^1
+      postcss: ^8.4.12
+      typescript: '>=4.1.0'
+    peerDependenciesMeta:
+      '@swc/core':
+        optional: true
+      postcss:
+        optional: true
+      typescript:
+        optional: true
+    dependencies:
+      bundle-require: 4.0.1(esbuild@0.18.6)
+      cac: 6.7.14
+      chokidar: 3.5.3
+      debug: 4.3.4
+      esbuild: 0.18.6
+      execa: 5.1.1
+      globby: 11.1.0
+      joycon: 3.1.1
+      postcss-load-config: 4.0.1(ts-node@10.9.1)
+      resolve-from: 5.0.0
+      rollup: 3.25.2
       source-map: 0.8.0-beta.0
       sucrase: 3.32.0
       tree-kill: 1.2.2

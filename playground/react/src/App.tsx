@@ -1,8 +1,9 @@
 import { useState } from "react";
 import reactLogo from "./assets/react.svg";
 import "./App.css";
-import { cn, useProxyState, useDeepClone } from "@chiastack/utils";
-import { Button, Input } from "@chiastack/ui";
+import { cn, useProxyState, useDeepClone } from "@chiastack/ui-utils";
+import { Button, Input, FadeIn } from "@chiastack/ui";
+import { z } from "zod";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -57,9 +58,11 @@ function App() {
           Edit <code>src/App.tsx</code> and save to test HMR
         </p>
       </div>
-      <p className="read-the-docs">
-        Create with '@chia-stack/react-ts-tailwind' template
-      </p>
+      <FadeIn>
+        <p className="read-the-docs">
+          Create with '@chia-stack/react-ts-tailwind' template
+        </p>
+      </FadeIn>
     </div>
   );
 }

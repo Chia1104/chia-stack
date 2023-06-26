@@ -1,15 +1,15 @@
 import React, { type FC } from "react";
 import { AnimatePresence, motion, MotionProps } from "framer-motion";
 import { createPortal } from "react-dom";
-import { cn, usePortal, useLockedBody } from "@chiastack/utils";
+import { cn, usePortal, useLockedBody } from "@chiastack/ui-utils";
+import { type DefaultProps } from "../type";
 
 interface ModalProps extends MotionProps {
   isOpen: boolean;
   handleModal: () => void;
-  className?: string;
 }
 
-const Modal: FC<ModalProps> = (props) => {
+const Modal: FC<ModalProps & DefaultProps> = (props) => {
   const { isOpen, children, handleModal, className, ...rest } = props;
   const ov = {
     open: { opacity: 1 },

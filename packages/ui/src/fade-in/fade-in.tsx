@@ -1,20 +1,21 @@
-import { motion, useInView } from "framer-motion";
+import { motion, useInView, type AnimationProps } from "framer-motion";
 import React, { useRef, type ReactNode } from "react";
-import { cn } from "@chiastack/utils";
+import { cn } from "@chiastack/ui-utils";
+import { type DefaultProps } from "../type";
 
 const FadeIn = ({
   children,
   className,
   noVertical,
-  delay,
   viewTriggerOffset,
+  transition,
+  ...rest
 }: {
   children: ReactNode;
-  className?: string;
   noVertical?: boolean;
-  delay?: number;
   viewTriggerOffset?: boolean;
-}) => {
+} & AnimationProps &
+  DefaultProps) => {
   const ref = useRef(null);
   const inView = useInView(ref, {
     once: true,
@@ -40,10 +41,11 @@ const FadeIn = ({
       className={cn(className)}
       initial={false}
       transition={{
-        duration: 1,
-        delay: delay || 0,
-        ease: [0.21, 0.47, 0.32, 0.98],
-      }}>
+        type: "spring",
+        delay: 0,
+        ...transition,
+      }}
+      {...rest}>
       {children}
     </motion.div>
   );

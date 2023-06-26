@@ -1,5 +1,5 @@
 ﻿import React, { type FC, type ComponentProps } from "react";
-import { cn } from "@chiastack/utils";
+import { cn } from "@chiastack/ui-utils";
 
 const HeroButton: FC<
   ComponentProps<"button"> & { upClassName?: string; downClassName?: string }

@@ -1,3 +1,5 @@
+import { type ClassValue } from "@chiastack/ui-utils";
+
 export type Color =
   | "primary"
   | "secondary"
@@ -7,3 +9,8 @@ export type Color =
   | "danger"
   | "light"
   | "dark";
+
+export type DefaultProps = {
+  noneStyle?: boolean;
+  className?: ClassValue;
+};
