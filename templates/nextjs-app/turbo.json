@@ -3,7 +3,7 @@
   "pipeline": {
     "build:next": {
       "outputs": [".next/**", "!.next/cache/**"],
-      "inputs": ["package.json", "next.config.js", "src/**", "tailwind.config.ts"]
+      "inputs": ["package.json", "next.config.mjs", "src/**", "tailwind.config.ts"]
     },
     "dev:next": {
       "cache": false,
