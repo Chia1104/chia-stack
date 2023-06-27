@@ -8,3 +8,5 @@ export { default as useLockedBody } from "./use-locked-body";
 export * from "./cn";
 export { default as useProxyState } from "./use-proxy-state";
 export { default as useDeepClone } from "./use-deep-clone";
+export { default as useCopyToClipboard } from "./use-copy-to-clipboard";
+export * from "./use-copy-to-clipboard";
