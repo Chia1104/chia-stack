@@ -1,0 +1,10 @@
+{
+  "$schema": "https://json.schemastore.org/package",
+  "name": "@chiastack/create-app",
+  "version": "0.0.1-beta.1",
+  "private": true,
+  "scripts": {
+    "dev": "make dev",
+    "build": "make build"
+  }
+}
