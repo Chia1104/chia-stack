@@ -17,6 +17,7 @@
   "dependencies": {
     "@chiastack/ui": "workspace:*",
     "@chiastack/ui-utils": "workspace:*",
+    "@chiastack/utils": "workspace:*",
     "framer-motion": "^10.12.17",
     "lodash": "^4.17.21",
     "react": "^18.2.0",
