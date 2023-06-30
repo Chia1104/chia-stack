@@ -3,6 +3,7 @@ import { cn } from "@chiastack/ui-utils";
 import { type VariantProps, cva } from "class-variance-authority";
 import { motion, type MotionProps } from "framer-motion";
 import { tv, type VariantProps as TVariantProps } from "tailwind-variants";
+import { type DefaultProps } from "../type";
 
 interface ButtonProps
   extends ButtonHTMLAttributes<HTMLButtonElement>,
@@ -119,20 +120,23 @@ const buttonVariants = cva(
   }
 );
 
-const Button = forwardRef<HTMLButtonElement, ButtonProps & MotionProps>(
-  ({ className, children, variant, size, ...props }) => {
-    return (
-      <motion.button
-        whileTap={{
-          scale: 0.95,
-        }}
-        className={cn(buttonVariants({ variant, size, className }))}
-        {...props}>
-        {children}
-      </motion.button>
-    );
-  }
-);
+const Button = forwardRef<
+  HTMLButtonElement,
+  ButtonProps & MotionProps & DefaultProps
+>(({ className, children, variant, size, noneStyle, ...props }) => {
+  return (
+    <motion.button
+      whileTap={{
+        scale: 0.95,
+      }}
+      className={cn(
+        noneStyle ? className : buttonVariants({ variant, size, className })
+      )}
+      {...props}>
+      {children}
+    </motion.button>
+  );
+});
 Button.displayName = "Button";
 
 export default Button;
