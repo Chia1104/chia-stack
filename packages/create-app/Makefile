@@ -11,7 +11,7 @@ GOOS:=$(shell go env GOOS | xargs)
 
 .PHONY: build
 build:
-	go build -o hello$(EXT) hello.go
+	go build -o cs-app$(EXT) hello.go
 
 dev:
 	go run hello.go
