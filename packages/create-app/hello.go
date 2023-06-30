@@ -1,4 +1,4 @@
-package create_app
+package main
 
 import "fmt"
 
