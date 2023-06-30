@@ -9,6 +9,9 @@ const withBundleAnalyzer = withBundleAnalyzerImport({
 const withNextra = withNextraImport({
   theme: "nextra-theme-docs",
   themeConfig: "./theme.config.tsx",
+  flexsearch: true,
+  staticImage: true,
+  defaultShowCopyCode: true,
 });
 
 const securityHeaders = [
@@ -39,6 +42,9 @@ const nextConfig = {
   output: "standalone",
   reactStrictMode: true,
   swcMinify: true,
+  experimental: {
+    legacyBrowsers: false,
+  },
   eslint: {
     ignoreDuringBuilds: true,
   },
