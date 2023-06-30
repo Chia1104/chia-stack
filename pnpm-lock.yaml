@@ -158,6 +158,8 @@ importers:
         specifier: 3.3.2
         version: 3.3.2(ts-node@10.9.1)
 
+  packages/create-app: {}
+
   packages/tailwind-config:
     devDependencies:
       tailwindcss:
