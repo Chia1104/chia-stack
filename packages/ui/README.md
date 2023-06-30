@@ -1,4 +1,4 @@
-# @chia-stack/react-ui
+# @chiastack/ui
 
 A React UI library based on Tailwind CSS and Radix UI ~~is available~~.
 
@@ -7,7 +7,7 @@ You can easily incorporate your own Tailwind config without any conflicts, and i
 ## Installation
 
 ```bash
-pnpm add @chiastack/ui @chiastack/tailwind-config
+pnpm add @chiastack/ui @chiastack/ui-utils @chiastack/tailwind-config framer-motion
 ```
 
 ## Configuration
