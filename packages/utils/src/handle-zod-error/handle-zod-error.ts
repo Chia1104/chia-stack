@@ -26,7 +26,7 @@ const handleZodError = <T = unknown>({
   preParse?: (data: T | string) => void;
   postParse?: (data: T | string) => void;
   onError?: (message: string, issues: ZodIssue[]) => void;
-  onFinally?: () => void;
+  onFinally?: () => void | HandleZodErrorReturn;
 }): HandleZodErrorReturn => {
   try {
     preParse?.((value as string) ?? (data as T));
