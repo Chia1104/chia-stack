@@ -23,4 +23,42 @@ describe("setSearchParams", () => {
       "foo=bar&baz=qux"
     );
   });
+
+  it("should return 'foo=bar&baz=qux' if foo param is 'bar' and baz param is 'qux' and baseUrl is 'https://example.com'", () => {
+    const result = setSearchParams(
+      { foo: "bar", baz: "qux" },
+      { baseUrl: "https://example.com" }
+    );
+    expect(result).toEqual("https://example.com?foo=bar&baz=qux");
+  });
+
+  it("should return 'foo=bar&baz=qux' if foo param is 'bar' and baz param is 'qux' and baseUrl is 'https://example.com/'", () => {
+    const result = setSearchParams(
+      { foo: "bar", baz: "qux" },
+      { baseUrl: "https://example.com/" }
+    );
+    expect(result).toEqual("https://example.com?foo=bar&baz=qux");
+  });
+  it("should return 'foo=bar&baz=qux' if foo param is 'bar' and baz param is 'qux' and baseUrl is 'https://example.com?'", () => {
+    const result = setSearchParams(
+      { foo: "bar", baz: "qux" },
+      { baseUrl: "https://example.com?" }
+    );
+    expect(result).toEqual("https://example.com?foo=bar&baz=qux");
+  });
+  it("should return 'foo=bar&baz=qux' if foo param is 'bar' and baz param is 'qux' and baseUrl is 'https://example.com/?'", () => {
+    const result = setSearchParams(
+      { foo: "bar", baz: "qux" },
+      { baseUrl: "https://example.com/?" }
+    );
+    expect(result).toEqual("https://example.com/?foo=bar&baz=qux");
+  });
+
+  it("should return 'foo=bar&baz=qux' if foo param is 'bar' and baz param is 'qux' and baseUrl is '/v1/api'", () => {
+    const result = setSearchParams(
+      { foo: "bar", baz: "qux" },
+      { baseUrl: "/v1/api" }
+    );
+    expect(result).toEqual("/v1/api?foo=bar&baz=qux");
+  });
 });
