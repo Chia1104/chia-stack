@@ -1,7 +1,6 @@
 import Image from "next/image";
 import { Inter } from "next/font/google";
-// 0.0!
-import Button from "@chiastack/ui/button/button";
+import Button from "@chiastack/ui/button";
 
 const inter = Inter({ subsets: ["latin"] });
 

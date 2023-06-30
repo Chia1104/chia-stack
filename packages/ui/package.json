@@ -73,43 +73,43 @@
       "import": "./dist/index.mjs",
       "types": "./dist/index.d.ts"
     },
-    "./accordion/accordion": {
+    "./accordion": {
       "import": "./dist/accordion/accordion.mjs",
       "types": "./dist/accordion/accordion.d.ts"
     },
-    "./aspect-ratio/aspect-ratio": {
+    "./aspect-ratio": {
       "import": "./dist/aspect-ratio/aspect-ratio.mjs",
       "types": "./dist/aspect-ratio/aspect-ratio.d.ts"
     },
-    "./avatar/avatar": {
+    "./avatar": {
       "import": "./dist/avatar/avatar.mjs",
       "types": "./dist/avatar/avatar.d.ts"
     },
-    "./button/button": {
+    "./button": {
       "import": "./dist/button/button.mjs",
       "types": "./dist/button/button.d.ts"
     },
-    "./fade-in/fade-in": {
+    "./fade-in": {
       "import": "./dist/fade-in/fade-in.mjs",
       "types": "./dist/fade-in/fade-in.d.ts"
     },
-    "./hero-button/hero-button": {
+    "./hero-button": {
       "import": "./dist/hero-button/hero-button.mjs",
       "types": "./dist/hero-button/hero-button.d.ts"
     },
-    "./hover-card/hover-card": {
+    "./hover-card": {
       "import": "./dist/hover-card/hover-card.mjs",
       "types": "./dist/hover-card/hover-card.d.ts"
     },
-    "./input/input": {
+    "./input": {
       "import": "./dist/input/input.mjs",
       "types": "./dist/input/input.d.ts"
     },
-    "./modal/modal": {
+    "./modal": {
       "import": "./dist/modal/modal.mjs",
       "types": "./dist/modal/modal.d.ts"
     },
-    "./textarea/textarea": {
+    "./textarea": {
       "import": "./dist/textarea/textarea.mjs",
       "types": "./dist/textarea/textarea.d.ts"
     }
@@ -117,64 +117,34 @@
   "typesVersions": {
     "*": {
       "avatar": [
-        "dist/avatar.d.ts"
+        "./dist/avatar/avatar.d.ts"
       ],
       "input": [
-        "dist/input.d.ts"
+        "./dist/input/input.d.ts"
       ],
       "hover-card": [
-        "dist/hover-card.d.ts"
+        "./dist/hover-card/hover-card.d.ts"
       ],
       "button": [
-        "dist/button.d.ts"
+        "./dist/button/button.d.ts"
       ],
       "fade-in": [
-        "dist/fade-in.d.ts"
+        "./dist/fade-in/fade-in.d.ts"
       ],
       "hero-button": [
-        "dist/hero-button.d.ts"
+        "./dist/hero-button/hero-button.d.ts"
       ],
       "modal": [
-        "dist/modal.d.ts"
+        "./dist/modal/modal.d.ts"
       ],
       "textarea": [
-        "dist/textarea.d.ts"
+        "./dist/textarea/textarea.d.ts"
       ],
       "accordion": [
-        "dist/accordion.d.ts"
+        "./dist/accordion/accordion.d.ts"
       ],
       "aspect-ratio": [
-        "dist/aspect-ratio.d.ts"
-      ],
-      "accordion/accordion": [
-        "dist/accordion/accordion.d.ts"
-      ],
-      "aspect-ratio/aspect-ratio": [
-        "dist/aspect-ratio/aspect-ratio.d.ts"
-      ],
-      "avatar/avatar": [
-        "dist/avatar/avatar.d.ts"
-      ],
-      "button/button": [
-        "dist/button/button.d.ts"
-      ],
-      "fade-in/fade-in": [
-        "dist/fade-in/fade-in.d.ts"
-      ],
-      "hero-button/hero-button": [
-        "dist/hero-button/hero-button.d.ts"
-      ],
-      "hover-card/hover-card": [
-        "dist/hover-card/hover-card.d.ts"
-      ],
-      "input/input": [
-        "dist/input/input.d.ts"
-      ],
-      "modal/modal": [
-        "dist/modal/modal.d.ts"
-      ],
-      "textarea/textarea": [
-        "dist/textarea/textarea.d.ts"
+        "./dist/aspect-ratio/aspect-ratio.d.ts"
       ]
     }
   }

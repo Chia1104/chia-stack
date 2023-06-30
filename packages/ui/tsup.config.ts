@@ -53,12 +53,15 @@ export default defineConfig((opts) => {
         [...client]
           .filter((e) => e.endsWith(".tsx"))
           .forEach((entry) => {
-            const file = entry.replace("./src/", "").replace(".tsx", "");
+            // ./src/foo/foo.tsx -> foo
+            const file = entry.split("/").pop()?.split(".")[0] ?? "";
             pkgJson.exports["./" + file] = {
-              import: "./dist/" + file + ".mjs",
-              types: "./dist/" + file + ".d.ts",
+              import: "./dist/" + file + "/" + file + ".mjs",
+              types: "./dist/" + file + "/" + file + ".d.ts",
             };
-            pkgJson.typesVersions["*"][file] = ["dist/" + file + ".d.ts"];
+            pkgJson.typesVersions["*"][file] = [
+              "./dist/" + file + "/" + file + ".d.ts",
+            ];
           });
 
         await writeFile("./package.json", JSON.stringify(pkgJson, null, 2));
