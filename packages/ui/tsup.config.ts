@@ -64,6 +64,14 @@ export default defineConfig((opts) => {
             ];
           });
 
+        const rootEntryFiles = ["dist/index.mjs"];
+
+        for (const file of rootEntryFiles) {
+          const content = await readFile(file, "utf-8");
+          const newContent = `'use client';\n${content}`;
+          await writeFile(file, newContent);
+        }
+
         await writeFile("./package.json", JSON.stringify(pkgJson, null, 2));
       },
     },
