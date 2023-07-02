@@ -68,7 +68,7 @@
   },
   "exports": {
     "./package.json": "./package.json",
-    "./src/style/styles.css": "./dist/index.css",
+    "./styles.css": "./dist/styles.css",
     ".": {
       "import": "./dist/index.mjs",
       "types": "./dist/index.d.ts"

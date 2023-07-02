@@ -30,7 +30,7 @@ function App() {
       <h1>Vite + React + TS + TailwindCSS</h1>
       <div className={cn("card flex flex-col gap-3")}>
         <Button
-          className="border-info bg-primary border"
+          className="border-info bg-primary-light border"
           onClick={() => setCount((count) => count + 1)}>
           count is {count}
         </Button>

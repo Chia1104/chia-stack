@@ -44,7 +44,7 @@ export default defineConfig((opts) => {
         ) as PackageJson;
         pkgJson.exports = {
           "./package.json": "./package.json",
-          "./src/style/styles.css": "./dist/index.css",
+          "./styles.css": "./dist/styles.css",
           ".": {
             import: "./dist/index.mjs",
             types: "./dist/index.d.ts",
@@ -63,6 +63,14 @@ export default defineConfig((opts) => {
               "./dist/" + file + "/" + file + ".d.ts",
             ];
           });
+
+        // const rootEntryFiles = ["dist/index.mjs"];
+        //
+        // for (const file of rootEntryFiles) {
+        //   const content = await readFile(file, "utf-8");
+        //   const newContent = `'use client';\n${content}`;
+        //   await writeFile(file, newContent);
+        // }
 
         await writeFile("./package.json", JSON.stringify(pkgJson, null, 2));
       },
