@@ -5,6 +5,7 @@
   "private": true,
   "main": "./dist/index.mjs",
   "types": "./dist/index.d.ts",
+  "sideEffects": false,
   "scripts": {
     "build": "tsup && tailwindcss -i ./src/style/styles.css -o ./dist/styles.css",
     "dev": "concurrently \"tsup --watch\" \"tailwindcss -i ./src/style/styles.css -o ./dist/styles.css --watch\"",
@@ -61,7 +62,9 @@
   "peerDependencies": {
     "framer-motion": "^10.12.16",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "@chiastack/ui-utils": "latest",
+    "@chiastack/utils": "latest"
   },
   "engines": {
     "node": ">=16"
