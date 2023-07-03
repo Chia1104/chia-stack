@@ -2,8 +2,10 @@ import { useState } from "react";
 import reactLogo from "./assets/react.svg";
 import "./App.css";
 import { cn, useProxyState, useDeepClone } from "@chiastack/ui-utils";
-import { Button, Input, FadeIn } from "@chiastack/ui";
-import { z } from "zod";
+// import { Button, Input, FadeIn } from "@chiastack/ui";
+import Button from "@chiastack/ui/button";
+import Input from "@chiastack/ui/input";
+import FadeIn from "@chiastack/ui/fade-in";
 
 function App() {
   const [count, setCount] = useState(0);
