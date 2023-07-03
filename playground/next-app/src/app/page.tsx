@@ -9,7 +9,7 @@ import {
   AccordionTrigger,
 } from "@chiastack/ui";
 
-export function AccordionDemo() {
+function AccordionDemo() {
   return (
     <Accordion type="single" collapsible className="w-full">
       <AccordionItem value="item-1">
