@@ -1,6 +1,6 @@
 {
   "$schema": "https://json.schemastore.org/package",
-  "name": "@chiastack/create-react-router-routes",
+  "name": "@chiastack/create-react-routes",
   "version": "0.0.1-beta.1",
   "private": true,
   "types": "./dist/index.d.ts",
@@ -21,7 +21,14 @@
   },
   "devDependencies": {
     "@chiastack/tsconfig": "workspace:*",
+    "@chiastack/utils": "workspace:*",
+    "react": "^18.2.0",
+    "react-router-dom": "^6.14.2",
     "tsup": "^7.0.0"
+  },
+  "peerDependencies": {
+    "react": "^17.0.2",
+    "react-router-dom": "^6.14.2"
   },
   "engines": {
     "node": ">=16"
