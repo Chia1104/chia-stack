@@ -1,8 +1,9 @@
 {
   "extends": ["@chiastack/tsconfig/base.json"],
-  "include": ["src", "vitest.config.ts", "tsup.config.ts"],
+  "include": ["src", "vitest.config.ts", "tsup.config.ts", "__tests__"],
   "exclude": ["dist", "build", "node_modules"],
   "compilerOptions": {
+    "module": "ESNext",
     "jsx": "react"
   }
 }
