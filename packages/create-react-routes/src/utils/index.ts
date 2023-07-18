@@ -1,7 +1,7 @@
 import fs from "fs";
 import path from "path";
 import z from "zod";
-import { FILE_NAME } from "../shared/constant";
+import { FILE_NAME } from "../shared/constants";
 
 export const fileSchema = z.enum(FILE_NAME);
 
