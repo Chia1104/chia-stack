@@ -16,6 +16,8 @@
     "playground/*"
   ],
   "scripts": {
+    "release": "changeset publish",
+    "version": "changeset version",
     "prepare": "husky install",
     "postinstall": "manypkg check",
     "build": "turbo run build",

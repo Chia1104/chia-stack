@@ -2,7 +2,7 @@
   "$schema": "https://json.schemastore.org/package",
   "name": "@chiastack/ui-utils",
   "version": "0.0.1-beta.1",
-  "private": true,
+  "private": false,
   "types": "./dist/index.d.ts",
   "scripts": {
     "build": "tsup",
