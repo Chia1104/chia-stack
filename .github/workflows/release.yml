@@ -5,6 +5,10 @@ on:
     branches:
       - canary
 
+env:
+  TURBO_TEAM: ${{ secrets.TURBO_TEAM }}
+  TURBO_TOKEN: ${{ secrets.TURBO_TOKEN }}
+
 jobs:
   release:
     runs-on: ubuntu-latest
@@ -29,7 +33,7 @@ jobs:
         run: pnpm build
 
       - name: Type Check
-        run: pnpm run types:check
+        run: pnpm run type:check
 
       - name: Create Release Pull Request or Publish to npm
         uses: changesets/action@v1

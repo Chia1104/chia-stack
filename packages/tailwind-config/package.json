@@ -3,7 +3,6 @@
   "name": "@chiastack/tailwind-config",
   "types": "index.d.ts",
   "version": "0.0.1-beta.1",
-  "private": false,
   "main": "index.js",
   "devDependencies": {
     "tailwindcss": "^3.3.2",
