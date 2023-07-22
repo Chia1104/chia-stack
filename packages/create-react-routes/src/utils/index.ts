@@ -13,7 +13,7 @@ export function logger(
 }
 
 /**
- *
+ * @description Read folder files recursively
  * @param {string} folderPath
  * @returns {string[]}
  */
