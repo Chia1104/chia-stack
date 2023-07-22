@@ -16,7 +16,7 @@
   },
   "dependencies": {
     "@chiastack/ui": "0.0.1-beta.2",
-    "@chiastack/ui-utils": "0.0.1-beta.2",
+    "@chiastack/ui-utils": "0.0.1-beta.3",
     "@chiastack/utils": "0.0.1-beta.2",
     "framer-motion": "^10.12.17",
     "lodash": "^4.17.21",

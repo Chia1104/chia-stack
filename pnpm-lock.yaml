@@ -93,7 +93,7 @@ importers:
         specifier: 0.0.1-beta.2
         version: link:../../packages/ui
       '@chiastack/ui-utils':
-        specifier: 0.0.1-beta.2
+        specifier: 0.0.1-beta.3
         version: link:../../packages/ui-utils
       '@chiastack/utils':
         specifier: 0.0.1-beta.2
@@ -185,7 +185,7 @@ importers:
         specifier: 0.0.1-beta.2
         version: link:../tsconfig
       '@chiastack/ui-utils':
-        specifier: 0.0.1-beta.2
+        specifier: 0.0.1-beta.3
         version: link:../ui-utils
       '@chiastack/utils':
         specifier: 0.0.1-beta.2
@@ -362,7 +362,7 @@ importers:
         specifier: 0.0.1-beta.2
         version: link:../../packages/ui
       '@chiastack/ui-utils':
-        specifier: 0.0.1-beta.2
+        specifier: 0.0.1-beta.3
         version: link:../../packages/ui-utils
       '@chiastack/utils':
         specifier: 0.0.1-beta.2
@@ -435,7 +435,7 @@ importers:
         specifier: 0.0.1-beta.2
         version: link:../../packages/ui
       '@chiastack/ui-utils':
-        specifier: 0.0.1-beta.2
+        specifier: 0.0.1-beta.3
         version: link:../../packages/ui-utils
       '@chiastack/utils':
         specifier: 0.0.1-beta.2
