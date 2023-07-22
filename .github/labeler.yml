@@ -13,7 +13,7 @@
 "🧰 package: tsconfig":
   - any: ["packages/tsconfig/**"]
 
-"📦 package":
+"ui-package":
   - any: ["packages/**"]
 
 "🚀 docs":
