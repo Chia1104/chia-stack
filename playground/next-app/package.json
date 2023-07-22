@@ -1,6 +1,6 @@
 {
   "$schema": "https://json.schemastore.org/package",
-  "name": "next-app",
+  "name": "next-app-play",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -15,30 +15,30 @@
     "type:check": "tsc --noEmit"
   },
   "dependencies": {
-    "@chiastack/ui": "workspace:*",
-    "@chiastack/ui-utils": "workspace:*",
-    "@chiastack/utils": "workspace:*",
+    "@chiastack/ui": "0.0.1-beta.2",
+    "@chiastack/ui-utils": "0.0.1-beta.2",
+    "@chiastack/utils": "0.0.1-beta.2",
     "@next/bundle-analyzer": "^13.4.7",
     "clsx": "^1.2.1",
     "dayjs": "^1.11.8",
     "framer-motion": "^10.12.17",
     "lodash": "^4.17.21",
     "next": "latest",
-    "react": "18.2.0",
-    "react-dom": "18.2.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
     "server-only": "^0.0.1",
     "sharp": "^0.32.1"
   },
   "devDependencies": {
-    "@chiastack/tailwind-config": "workspace:*",
-    "@chiastack/tsconfig": "workspace:*",
+    "@chiastack/tailwind-config": "0.0.1-beta.2",
+    "@chiastack/tsconfig": "0.0.1-beta.2",
     "@testing-library/react": "^14.0.0",
     "@types/node": "20.3.1",
-    "@types/react": "18.2.13",
-    "@types/react-dom": "18.2.6",
+    "@types/react": "^18.2.13",
+    "@types/react-dom": "^18.2.6",
     "@vitejs/plugin-react-swc": "^3.3.2",
     "autoprefixer": "10.4.14",
     "postcss": "8.4.24",
-    "tailwindcss": "3.3.2"
+    "tailwindcss": "^3.3.2"
   }
 }

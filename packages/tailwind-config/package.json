@@ -2,8 +2,10 @@
   "$schema": "https://json.schemastore.org/package",
   "name": "@chiastack/tailwind-config",
   "types": "index.d.ts",
-  "version": "0.0.1-beta.1",
-  "private": true,
+  "version": "0.0.1-beta.2",
+  "publishConfig": {
+    "access": "public"
+  },
   "main": "index.js",
   "devDependencies": {
     "tailwindcss": "^3.3.2",

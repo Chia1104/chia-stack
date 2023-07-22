@@ -1,5 +1,5 @@
 {
-  "name": "react",
+  "name": "react-play",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -15,24 +15,24 @@
     "type:check": "tsc --noEmit"
   },
   "dependencies": {
-    "@chiastack/ui": "workspace:*",
-    "@chiastack/ui-utils": "workspace:*",
-    "@chiastack/utils": "workspace:*",
+    "@chiastack/ui": "0.0.1-beta.2",
+    "@chiastack/ui-utils": "0.0.1-beta.2",
+    "@chiastack/utils": "0.0.1-beta.2",
     "framer-motion": "^10.12.17",
     "lodash": "^4.17.21",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
   "devDependencies": {
-    "@chiastack/tailwind-config": "workspace:*",
-    "@chiastack/tsconfig": "workspace:*",
+    "@chiastack/tailwind-config": "0.0.1-beta.2",
+    "@chiastack/tsconfig": "0.0.1-beta.2",
     "@testing-library/react": "^14.0.0",
     "@types/lodash": "^4.14.195",
-    "@types/react": "^18.2.14",
+    "@types/react": "^18.2.13",
     "@types/react-dom": "^18.2.6",
     "@vitejs/plugin-react-swc": "^3.3.2",
-    "autoprefixer": "^10.4.14",
-    "postcss": "^8.4.24",
+    "autoprefixer": "10.4.14",
+    "postcss": "8.4.24",
     "tailwindcss": "^3.3.2",
     "vite": "^4.3.9"
   }

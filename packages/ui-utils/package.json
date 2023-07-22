@@ -1,8 +1,10 @@
 {
   "$schema": "https://json.schemastore.org/package",
   "name": "@chiastack/ui-utils",
-  "version": "0.0.1-beta.1",
-  "private": true,
+  "version": "0.0.1-beta.2",
+  "publishConfig": {
+    "access": "public"
+  },
   "types": "./dist/index.d.ts",
   "scripts": {
     "build": "tsup",
@@ -20,7 +22,7 @@
     }
   },
   "devDependencies": {
-    "@chiastack/tsconfig": "workspace:*",
+    "@chiastack/tsconfig": "0.0.1-beta.2",
     "@testing-library/react": "^14.0.0",
     "@types/lodash": "^4.14.195",
     "@types/react": "^18.2.13",
@@ -34,7 +36,7 @@
   },
   "peerDependencies": {
     "lodash": ">=4.17.21",
-    "react": ">=18"
+    "react": ">=18.2.0"
   },
   "engines": {
     "node": ">=16"
