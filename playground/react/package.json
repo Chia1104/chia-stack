@@ -15,17 +15,17 @@
     "type:check": "tsc --noEmit"
   },
   "dependencies": {
-    "@chiastack/ui": "0.0.1-beta.1",
-    "@chiastack/ui-utils": "0.0.1-beta.1",
-    "@chiastack/utils": "0.0.1-beta.1",
+    "@chiastack/ui": "0.0.1-beta.2",
+    "@chiastack/ui-utils": "0.0.1-beta.2",
+    "@chiastack/utils": "0.0.1-beta.2",
     "framer-motion": "^10.12.17",
     "lodash": "^4.17.21",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
   "devDependencies": {
-    "@chiastack/tailwind-config": "0.0.1-beta.1",
-    "@chiastack/tsconfig": "0.0.1-beta.1",
+    "@chiastack/tailwind-config": "0.0.1-beta.2",
+    "@chiastack/tsconfig": "0.0.1-beta.2",
     "@testing-library/react": "^14.0.0",
     "@types/lodash": "^4.14.195",
     "@types/react": "^18.2.13",

@@ -15,9 +15,9 @@
     "type:check": "tsc --noEmit"
   },
   "dependencies": {
-    "@chiastack/ui": "0.0.1-beta.1",
-    "@chiastack/ui-utils": "0.0.1-beta.1",
-    "@chiastack/utils": "0.0.1-beta.1",
+    "@chiastack/ui": "0.0.1-beta.2",
+    "@chiastack/ui-utils": "0.0.1-beta.2",
+    "@chiastack/utils": "0.0.1-beta.2",
     "@next/bundle-analyzer": "^13.4.7",
     "clsx": "^1.2.1",
     "dayjs": "^1.11.8",
@@ -30,8 +30,8 @@
     "sharp": "^0.32.1"
   },
   "devDependencies": {
-    "@chiastack/tailwind-config": "0.0.1-beta.1",
-    "@chiastack/tsconfig": "0.0.1-beta.1",
+    "@chiastack/tailwind-config": "0.0.1-beta.2",
+    "@chiastack/tsconfig": "0.0.1-beta.2",
     "@testing-library/react": "^14.0.0",
     "@types/node": "20.3.1",
     "@types/react": "^18.2.13",

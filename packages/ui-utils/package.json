@@ -22,7 +22,7 @@
     }
   },
   "devDependencies": {
-    "@chiastack/tsconfig": "0.0.1-beta.1",
+    "@chiastack/tsconfig": "0.0.1-beta.2",
     "@testing-library/react": "^14.0.0",
     "@types/lodash": "^4.14.195",
     "@types/react": "^18.2.13",

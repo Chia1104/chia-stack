@@ -90,13 +90,13 @@ importers:
   apps/docs:
     dependencies:
       '@chiastack/ui':
-        specifier: 0.0.1-beta.1
+        specifier: 0.0.1-beta.2
         version: link:../../packages/ui
       '@chiastack/ui-utils':
-        specifier: 0.0.1-beta.1
+        specifier: 0.0.1-beta.2
         version: link:../../packages/ui-utils
       '@chiastack/utils':
-        specifier: 0.0.1-beta.1
+        specifier: 0.0.1-beta.2
         version: link:../../packages/utils
       '@next/bundle-analyzer':
         specifier: ^13.4.7
@@ -133,10 +133,10 @@ importers:
         version: 0.32.1
     devDependencies:
       '@chiastack/tailwind-config':
-        specifier: 0.0.1-beta.1
+        specifier: 0.0.1-beta.2
         version: link:../../packages/tailwind-config
       '@chiastack/tsconfig':
-        specifier: 0.0.1-beta.1
+        specifier: 0.0.1-beta.2
         version: link:../../packages/tsconfig
       '@testing-library/react':
         specifier: ^14.0.0
@@ -179,16 +179,16 @@ importers:
   packages/ui:
     devDependencies:
       '@chiastack/tailwind-config':
-        specifier: 0.0.1-beta.1
+        specifier: 0.0.1-beta.2
         version: link:../tailwind-config
       '@chiastack/tsconfig':
-        specifier: 0.0.1-beta.1
+        specifier: 0.0.1-beta.2
         version: link:../tsconfig
       '@chiastack/ui-utils':
-        specifier: 0.0.1-beta.1
+        specifier: 0.0.1-beta.2
         version: link:../ui-utils
       '@chiastack/utils':
-        specifier: 0.0.1-beta.1
+        specifier: 0.0.1-beta.2
         version: link:../utils
       '@radix-ui/react-accessible-icon':
         specifier: ^1.0.3
@@ -314,7 +314,7 @@ importers:
   packages/ui-utils:
     devDependencies:
       '@chiastack/tsconfig':
-        specifier: 0.0.1-beta.1
+        specifier: 0.0.1-beta.2
         version: link:../tsconfig
       '@testing-library/react':
         specifier: ^14.0.0
@@ -350,7 +350,7 @@ importers:
   packages/utils:
     devDependencies:
       '@chiastack/tsconfig':
-        specifier: 0.0.1-beta.1
+        specifier: 0.0.1-beta.2
         version: link:../tsconfig
       tsup:
         specifier: ^7.0.0
@@ -359,13 +359,13 @@ importers:
   playground/next-app:
     dependencies:
       '@chiastack/ui':
-        specifier: 0.0.1-beta.1
+        specifier: 0.0.1-beta.2
         version: link:../../packages/ui
       '@chiastack/ui-utils':
-        specifier: 0.0.1-beta.1
+        specifier: 0.0.1-beta.2
         version: link:../../packages/ui-utils
       '@chiastack/utils':
-        specifier: 0.0.1-beta.1
+        specifier: 0.0.1-beta.2
         version: link:../../packages/utils
       '@next/bundle-analyzer':
         specifier: ^13.4.7
@@ -399,10 +399,10 @@ importers:
         version: 0.32.1
     devDependencies:
       '@chiastack/tailwind-config':
-        specifier: 0.0.1-beta.1
+        specifier: 0.0.1-beta.2
         version: link:../../packages/tailwind-config
       '@chiastack/tsconfig':
-        specifier: 0.0.1-beta.1
+        specifier: 0.0.1-beta.2
         version: link:../../packages/tsconfig
       '@testing-library/react':
         specifier: ^14.0.0
@@ -432,13 +432,13 @@ importers:
   playground/react:
     dependencies:
       '@chiastack/ui':
-        specifier: 0.0.1-beta.1
+        specifier: 0.0.1-beta.2
         version: link:../../packages/ui
       '@chiastack/ui-utils':
-        specifier: 0.0.1-beta.1
+        specifier: 0.0.1-beta.2
         version: link:../../packages/ui-utils
       '@chiastack/utils':
-        specifier: 0.0.1-beta.1
+        specifier: 0.0.1-beta.2
         version: link:../../packages/utils
       framer-motion:
         specifier: ^10.12.17
@@ -454,10 +454,10 @@ importers:
         version: 18.2.0(react@18.2.0)
     devDependencies:
       '@chiastack/tailwind-config':
-        specifier: 0.0.1-beta.1
+        specifier: 0.0.1-beta.2
         version: link:../../packages/tailwind-config
       '@chiastack/tsconfig':
-        specifier: 0.0.1-beta.1
+        specifier: 0.0.1-beta.2
         version: link:../../packages/tsconfig
       '@testing-library/react':
         specifier: ^14.0.0
