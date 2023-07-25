@@ -69,8 +69,8 @@ importers:
         specifier: ^1.8.1
         version: 1.8.1
       superjson:
-        specifier: 1.12.4
-        version: 1.12.4
+        specifier: 1.13.1
+        version: 1.13.1
       ts-node:
         specifier: ^10.9.1
         version: 10.9.1(@types/node@20.3.1)(typescript@5.1.3)
@@ -9076,8 +9076,8 @@ packages:
       pirates: 4.0.5
       ts-interface-checker: 0.1.13
 
-  /superjson@1.12.4:
-    resolution: {integrity: sha512-vkpPQAxdCg9SLfPv5GPC5fnGrui/WryktoN9O5+Zif/14QIMjw+RITf/5LbBh+9QpBFb3KNvJth+puz2H8o6GQ==}
+  /superjson@1.13.1:
+    resolution: {integrity: sha512-AVH2eknm9DEd3qvxM4Sq+LTCkSXE2ssfh1t11MHMXyYXFQyQ1HLgVvV+guLTsaQnJU3gnaVo34TohHPulY/wLg==}
     engines: {node: '>=10'}
     dependencies:
       copy-anything: 3.0.5
