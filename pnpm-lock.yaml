@@ -15,8 +15,8 @@ importers:
         specifier: ^0.21.0
         version: 0.21.0
       '@next/eslint-plugin-next':
-        specifier: 13.4.7
-        version: 13.4.7
+        specifier: 13.4.12
+        version: 13.4.12
       '@total-typescript/ts-reset':
         specifier: 0.4.2
         version: 0.4.2
@@ -1666,6 +1666,12 @@ packages:
 
   /@next/env@13.4.12:
     resolution: {integrity: sha512-RmHanbV21saP/6OEPBJ7yJMuys68cIf8OBBWd7+uj40LdpmswVAwe1uzeuFyUsd6SfeITWT3XnQfn6wULeKwDQ==}
+    dev: false
+
+  /@next/eslint-plugin-next@13.4.12:
+    resolution: {integrity: sha512-6rhK9CdxEgj/j1qvXIyLTWEaeFv7zOK8yJMulz3Owel0uek0U9MJCGzmKgYxM3aAUBo3gKeywCZKyQnJKto60A==}
+    dependencies:
+      glob: 7.1.7
     dev: false
 
   /@next/eslint-plugin-next@13.4.7:
