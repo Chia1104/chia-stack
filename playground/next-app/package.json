@@ -16,7 +16,7 @@
   },
   "dependencies": {
     "@chiastack/ui": "0.0.1-beta.2",
-    "@chiastack/ui-utils": "0.0.1-beta.3",
+    "@chiastack/ui-utils": "0.0.1-beta.4",
     "@chiastack/utils": "0.0.1-beta.2",
     "@next/bundle-analyzer": "^13.4.7",
     "clsx": "^1.2.1",

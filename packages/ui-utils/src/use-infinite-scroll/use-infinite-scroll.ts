@@ -5,6 +5,7 @@ export interface UseInfiniteScrollOptions {
   isLoading?: boolean;
   isError?: boolean;
   onLoadMore?: () => void;
+  onLeave?: () => void;
   intersectionObserverInit?: IntersectionObserverInit;
 }
 
@@ -21,18 +22,21 @@ const useInfiniteScroll = (
     hasMore,
     isLoading,
     onLoadMore,
+    onLeave,
     intersectionObserverInit,
     isError = false,
   } = option;
   const observer = useRef<IntersectionObserver | null>(null);
   const ref = useCallback(
     (node: HTMLDivElement) => {
-      if (isLoading || isError || !hasMore) return;
       if (observer.current) observer.current.disconnect();
+      if (isLoading || isError || !hasMore) return;
       observer.current = new IntersectionObserver((entries) => {
         if (entries[0]?.isIntersecting && hasMore) {
           onLoadMore?.();
+          return;
         }
+        onLeave?.();
       }, intersectionObserverInit);
       if (node) observer.current.observe(node);
     },

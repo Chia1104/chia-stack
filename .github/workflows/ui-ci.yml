@@ -22,7 +22,7 @@ jobs:
     name: Build and Test
     timeout-minutes: 15
     runs-on: ubuntu-latest
-    if: ${{ contains(github.event.pull_request.labels.*.name, '📦 package') }}
+    if: ${{ contains(github.event.pull_request.labels.*.name, 'ui-package') }}
 
     steps:
       - name: '🐙️ Check out code'
