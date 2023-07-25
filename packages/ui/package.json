@@ -18,7 +18,7 @@
   "devDependencies": {
     "@chiastack/tailwind-config": "0.0.1-beta.2",
     "@chiastack/tsconfig": "0.0.1-beta.2",
-    "@chiastack/ui-utils": "0.0.1-beta.3",
+    "@chiastack/ui-utils": "0.0.1-beta.4",
     "@chiastack/utils": "0.0.1-beta.2",
     "@radix-ui/react-accessible-icon": "^1.0.3",
     "@radix-ui/react-accordion": "^1.1.2",
