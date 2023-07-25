@@ -5,7 +5,6 @@ export interface UseInfiniteScrollOptions {
   isLoading?: boolean;
   isError?: boolean;
   onLoadMore?: () => void;
-  onLeave?: () => void;
   intersectionObserverInit?: IntersectionObserverInit;
 }
 
@@ -22,7 +21,6 @@ const useInfiniteScroll = (
     hasMore,
     isLoading,
     onLoadMore,
-    onLeave,
     intersectionObserverInit,
     isError = false,
   } = option;
@@ -34,9 +32,7 @@ const useInfiniteScroll = (
       observer.current = new IntersectionObserver((entries) => {
         if (entries[0]?.isIntersecting && hasMore) {
           onLoadMore?.();
-          return;
         }
-        onLeave?.();
       }, intersectionObserverInit);
       if (node) observer.current.observe(node);
     },
