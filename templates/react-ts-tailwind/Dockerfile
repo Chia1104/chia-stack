@@ -5,7 +5,7 @@ WORKDIR /app
 COPY package.json pnpm-lock.yaml ./
 
 RUN apk add --no-cache libc6-compat && \
-    yarn global add pnpm && \
+    corepack enable && \
     pnpm i
 
 FROM node:18-alpine AS builder
@@ -15,10 +15,12 @@ WORKDIR /app
 COPY --from=deps /app/node_modules ./node_modules
 COPY . .
 
-ARG \
-    VITE_ENV_EXAMPLE
-ENV \
-    VITE_ENV_EXAMPLE=${VITE_ENV_EXAMPLE}
+ARG VITE_ENV_EXAMPLE \
+    TURBO_TEAM \
+    TURBO_TOKEN
+ENV VITE_ENV_EXAMPLE=${VITE_ENV_EXAMPLE} \
+    TURBO_TEAM=${TURBO_TEAM} \
+    TURBO_TOKEN=${TURBO_TOKEN}
 
 RUN yarn build
 
@@ -27,8 +29,7 @@ FROM nginx:alpine
 COPY /docker/nginx.conf /etc/nginx/conf.d/configfile.template
 COPY --from=builder /app/dist /usr/share/nginx/html
 
-ENV \
-    NODE_ENV=production \
+ENV NODE_ENV=production \
     PORT=8080 \
     HOST=0.0.0.0
 
