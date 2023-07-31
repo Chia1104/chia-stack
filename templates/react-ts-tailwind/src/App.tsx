@@ -26,7 +26,7 @@ function App() {
         </p>
       </div>
       <p className="read-the-docs">
-        Create with '@chia-stack/react-ts-tailwind' template
+        Create with '@chiastack/react-ts-tailwind' template
       </p>
     </div>
   );
