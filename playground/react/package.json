@@ -27,7 +27,7 @@
     "@chiastack/tailwind-config": "0.0.1-beta.2",
     "@chiastack/tsconfig": "0.0.1-beta.2",
     "@testing-library/react": "^14.0.0",
-    "@types/lodash": "^4.14.195",
+    "@types/lodash": "^4.14.196",
     "@types/react": "^18.2.13",
     "@types/react-dom": "^18.2.6",
     "@vitejs/plugin-react-swc": "^3.3.2",

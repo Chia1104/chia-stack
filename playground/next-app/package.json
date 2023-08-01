@@ -19,7 +19,7 @@
     "@chiastack/ui-utils": "0.0.1-beta.4",
     "@chiastack/utils": "0.0.1-beta.2",
     "@next/bundle-analyzer": "^13.4.7",
-    "clsx": "^1.2.1",
+    "clsx": "^2.0.0",
     "dayjs": "^1.11.8",
     "framer-motion": "^10.12.17",
     "lodash": "^4.17.21",

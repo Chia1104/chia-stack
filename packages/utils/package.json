@@ -23,7 +23,7 @@
   },
   "devDependencies": {
     "@chiastack/tsconfig": "0.0.1-beta.2",
-    "tsup": "^7.0.0"
+    "tsup": "^7.1.0"
   },
   "engines": {
     "node": ">=16"
