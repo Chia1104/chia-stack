@@ -7,7 +7,9 @@ import {
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
-} from "@chiastack/ui";
+} from "@chiastack/ui/accordion";
+
+import { Avatar, AvatarFallback, AvatarImage } from "@chiastack/ui/avatar";
 
 function AccordionDemo() {
   return (
@@ -46,6 +48,10 @@ export default function Home() {
           Get started by editing&nbsp;
           <code className="font-mono font-bold">src/app/page.tsx</code>
         </p>
+        <Avatar>
+          <AvatarFallback />
+          <AvatarImage src="https://i.pravatar.cc/300" />
+        </Avatar>
         <Button variant="success">Dope</Button>
         <Input placeholder="use client" />
         <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:h-auto lg:w-auto lg:bg-none">

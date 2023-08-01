@@ -21,7 +21,6 @@ export default defineConfig((opts) => {
     format: ["esm"],
     minify: true,
     outDir: "dist",
-    skipNodeModulesBundle: true,
   } satisfies Options;
 
   return [
