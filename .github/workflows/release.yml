@@ -3,7 +3,7 @@ name: Release
 on:
   push:
     branches:
-      - canary
+      - main
 
 env:
   TURBO_TEAM: ${{ secrets.TURBO_TEAM }}

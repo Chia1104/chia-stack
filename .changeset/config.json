@@ -5,7 +5,7 @@
   "fixed": [["@chiastack/ui", "@chiastack/ui-utils", "@chiastack/utils", "@chiastack/tailwind-config", "@chiastack/tsconfig"]],
   "linked": [],
   "access": "restricted",
-  "baseBranch": "canary",
+  "baseBranch": "main",
   "updateInternalDependencies": "patch",
   "___experimentalUnsafeOptions_WILL_CHANGE_IN_PATCH": {
     "onlyUpdatePeerDependentsWhenOutOfRange": true
