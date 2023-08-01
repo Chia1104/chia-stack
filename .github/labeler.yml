@@ -21,3 +21,6 @@
 
 "🎮 playground":
   - any: ["playground/**"]
+
+"🗃️ Templates":
+  - any: ["templates/**"]
