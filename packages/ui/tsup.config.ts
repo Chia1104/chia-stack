@@ -62,10 +62,10 @@ export default defineConfig((opts) => {
             const file = entry.split("/").pop()?.split(".")[0] ?? "";
             pkgJson.exports["./" + file] = {
               import: "./dist/" + file + "/" + file + ".mjs",
-              types: "./dist/" + file + "/" + file + ".d.ts",
+              types: "./dist/" + file + "/" + file + ".d.mts",
             };
             pkgJson.typesVersions["*"][file] = [
-              "./dist/" + file + "/" + file + ".d.ts",
+              "./dist/" + file + "/" + file + ".d.mts",
             ];
           });
 

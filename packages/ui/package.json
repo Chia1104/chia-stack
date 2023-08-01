@@ -6,7 +6,7 @@
     "access": "public"
   },
   "main": "./dist/index.mjs",
-  "types": "./dist/index.d.ts",
+  "types": "./dist/index.d.mts",
   "sideEffects": false,
   "scripts": {
     "build": "tsup && tailwindcss -i ./src/style/styles.css -o ./dist/styles.css",
@@ -80,76 +80,76 @@
     },
     "./accordion": {
       "import": "./dist/accordion/accordion.mjs",
-      "types": "./dist/accordion/accordion.d.ts"
+      "types": "./dist/accordion/accordion.d.mts"
     },
     "./aspect-ratio": {
       "import": "./dist/aspect-ratio/aspect-ratio.mjs",
-      "types": "./dist/aspect-ratio/aspect-ratio.d.ts"
+      "types": "./dist/aspect-ratio/aspect-ratio.d.mts"
     },
     "./avatar": {
       "import": "./dist/avatar/avatar.mjs",
-      "types": "./dist/avatar/avatar.d.ts"
+      "types": "./dist/avatar/avatar.d.mts"
     },
     "./button": {
       "import": "./dist/button/button.mjs",
-      "types": "./dist/button/button.d.ts"
+      "types": "./dist/button/button.d.mts"
     },
     "./fade-in": {
       "import": "./dist/fade-in/fade-in.mjs",
-      "types": "./dist/fade-in/fade-in.d.ts"
+      "types": "./dist/fade-in/fade-in.d.mts"
     },
     "./hero-button": {
       "import": "./dist/hero-button/hero-button.mjs",
-      "types": "./dist/hero-button/hero-button.d.ts"
+      "types": "./dist/hero-button/hero-button.d.mts"
     },
     "./hover-card": {
       "import": "./dist/hover-card/hover-card.mjs",
-      "types": "./dist/hover-card/hover-card.d.ts"
+      "types": "./dist/hover-card/hover-card.d.mts"
     },
     "./input": {
       "import": "./dist/input/input.mjs",
-      "types": "./dist/input/input.d.ts"
+      "types": "./dist/input/input.d.mts"
     },
     "./modal": {
       "import": "./dist/modal/modal.mjs",
-      "types": "./dist/modal/modal.d.ts"
+      "types": "./dist/modal/modal.d.mts"
     },
     "./textarea": {
       "import": "./dist/textarea/textarea.mjs",
-      "types": "./dist/textarea/textarea.d.ts"
+      "types": "./dist/textarea/textarea.d.mts"
     }
   },
   "typesVersions": {
     "*": {
       "avatar": [
-        "./dist/avatar/avatar.d.ts"
+        "./dist/avatar/avatar.d.mts"
       ],
       "input": [
-        "./dist/input/input.d.ts"
+        "./dist/input/input.d.mts"
       ],
       "hover-card": [
-        "./dist/hover-card/hover-card.d.ts"
+        "./dist/hover-card/hover-card.d.mts"
       ],
       "button": [
-        "./dist/button/button.d.ts"
+        "./dist/button/button.d.mts"
       ],
       "fade-in": [
-        "./dist/fade-in/fade-in.d.ts"
+        "./dist/fade-in/fade-in.d.mts"
       ],
       "hero-button": [
-        "./dist/hero-button/hero-button.d.ts"
+        "./dist/hero-button/hero-button.d.mts"
       ],
       "modal": [
-        "./dist/modal/modal.d.ts"
+        "./dist/modal/modal.d.mts"
       ],
       "textarea": [
-        "./dist/textarea/textarea.d.ts"
+        "./dist/textarea/textarea.d.mts"
       ],
       "accordion": [
-        "./dist/accordion/accordion.d.ts"
+        "./dist/accordion/accordion.d.mts"
       ],
       "aspect-ratio": [
-        "./dist/aspect-ratio/aspect-ratio.d.ts"
+        "./dist/aspect-ratio/aspect-ratio.d.mts"
       ]
     }
   }
