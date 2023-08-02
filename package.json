@@ -17,7 +17,11 @@
   ],
   "scripts": {
     "release": "changeset publish",
-    "version": "changeset version",
+    "version": "tsx scripts/version.ts",
+    "version:canary": "changeset version --snapshot canary",
+    "release:canary": "changeset publish --tag canary",
+    "version:beta": "changeset version --snapshot beta",
+    "release:beta": "changeset publish --tag beta",
     "prepare": "husky install",
     "postinstall": "manypkg check",
     "build": "turbo run build",
@@ -39,6 +43,7 @@
   },
   "packageManager": "pnpm@8.6.2",
   "dependencies": {
+    "@changesets/changelog-github": "^0.4.8",
     "@changesets/cli": "^2.26.2",
     "@manypkg/cli": "^0.21.0",
     "@next/eslint-plugin-next": "13.4.12",
@@ -61,6 +66,7 @@
     "shell-quote": "^1.8.1",
     "superjson": "1.13.1",
     "ts-node": "^10.9.1",
+    "tsx": "^3.12.7",
     "turbo": "1.10.12",
     "typescript": "^5.1.6",
     "vitest": "^0.33.0",
