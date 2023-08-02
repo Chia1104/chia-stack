@@ -62,8 +62,8 @@
     "tsup": "^7.1.0"
   },
   "peerDependencies": {
-    "@chiastack/ui-utils": "latest",
-    "@chiastack/utils": "latest",
+    "@chiastack/ui-utils": "0.0.1-beta.4",
+    "@chiastack/utils": "0.0.1-beta.2",
     "framer-motion": "^10.12.16",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
