@@ -81,6 +81,7 @@ module.exports = {
           "packages/*/tsconfig.json",
           "apps/*/tsconfig.json",
           "playground/*/tsconfig.json",
+          "./tsconfig.json",
         ],
       },
       rules: {

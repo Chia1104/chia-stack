@@ -1,6 +1,6 @@
 {
   "$schema": "https://unpkg.com/@changesets/config@2.3.1/schema.json",
-  "changelog": "@changesets/cli/changelog",
+  "changelog": ["@changesets/changelog-github", { "repo": "chia1104/chia-stack" }],
   "commit": false,
   "fixed": [["@chiastack/ui", "@chiastack/ui-utils", "@chiastack/utils"]],
   "linked": [],
