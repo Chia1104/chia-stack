@@ -9,12 +9,11 @@ env:
   TURBO_TEAM: ${{ secrets.TURBO_TEAM }}
   TURBO_TOKEN: ${{ secrets.TURBO_TOKEN }}
 
+concurrency: ${{ github.workflow }}-${{ github.ref }}
+
 jobs:
   release:
-    permissions:
-      contents: write
-      packages: write
-
+    name: Release
     runs-on: ubuntu-latest
 
     steps:
@@ -44,6 +43,18 @@ jobs:
         with:
           publish: pnpm run release
           version: pnpm run version
+          commit: "ci(changesets): version packages"
         env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+
+      - name: Create @beta release
+        if: steps.changesets.outputs.published != 'true'
+        run: |
+            git checkout main
+            pnpm version:beta
+            pnpm release:beta
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
