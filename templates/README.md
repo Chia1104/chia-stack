@@ -13,3 +13,4 @@ npx degit chia1104/chia-stack/templates/<EXAMPLE_NAME> <PROJECT_NAME>
 - [nextjs-t3](./nextjs-t3): NextJS(page) with T3 stack
 - [nextjs-app](./nextjs-app): NextJS with app directory structure
 - [turbo-apps](./turbo-apps): Turborepo stater
+- [expo-app](./expo-app): Expo app with TypeScript, Expo Router and Nativewind
